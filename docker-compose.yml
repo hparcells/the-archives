@@ -1,0 +1,6 @@
+services:
+  archives:
+    image: ghcr.io/hparcells/the-archives:latest
+    ports:
+      - "8014:8014"
+    restart: unless-stopped

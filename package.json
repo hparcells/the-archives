@@ -6,7 +6,10 @@
     "dev": "next dev -p 8000",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "docker:build": "docker build -t ghcr.io/hparcells/the-archives:latest .",
+    "docker:push": "docker push ghcr.io/hparcells/the-archives:latest",
+    "docker:deploy": "npm run docker:build && npm run docker:push"
   },
   "dependencies": {
     "next": "^16.2.4",
