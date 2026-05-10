@@ -2,7 +2,36 @@ import BackLink from '@/components/BackLink';
 import HomeSection from '@/components/HomeSection';
 import HomeSectionItem from '@/components/HomeSectionItem';
 
+const sections = [
+  {
+    title: 'Content',
+    items: [
+      { title: 'Projects', to: '/projects' },
+      { title: 'Blog', to: 'https://blog.hunterparcells.com/' },
+      { title: 'Spreadsheets', to: '/spreadsheets' }
+    ]
+  },
+  {
+    title: 'About',
+    items: [
+      { title: 'Now', to: '/now' },
+      { title: 'More About Me', to: '/me' },
+      { title: 'Tools and Workflow', to: '/tools' },
+      { title: 'This Website', to: '/website' }
+    ]
+  },
+  {
+    title: 'Other',
+    items: [
+      { title: 'Support / Ko-fi', to: 'https://ko-fi.com/hunterparcells' },
+      { title: 'Cool People', to: '/cool' }
+    ]
+  }
+];
+
 function Home() {
+  let counter = 1;
+
   return (
     <>
       <BackLink
@@ -18,57 +47,21 @@ function Home() {
             Originally one big list of every piece of content I&apos;ve created, now something more.
           </p>
         </section>
-        <HomeSection title='Content'>
-          <HomeSectionItem
-            title='Projects'
-            to='/projects'
-            number='01'
-          />
-          <HomeSectionItem
-            title='Blog'
-            to='https://blog.hunterparcells.com/'
-            number='02'
-          />
-          <HomeSectionItem
-            title='Spreadsheets'
-            to='/spreadsheets'
-            number='03'
-          />
-        </HomeSection>
-        <HomeSection title='About'>
-          <HomeSectionItem
-            title='Now'
-            to='/now'
-            number='04'
-          />
-          <HomeSectionItem
-            title='More About Me'
-            to='/me'
-            number='05'
-          />
-          <HomeSectionItem
-            title='Tools and Workflow'
-            to='/tools'
-            number='06'
-          />
-          <HomeSectionItem
-            title='This Website'
-            to='/website'
-            number='07'
-          />
-        </HomeSection>
-        <HomeSection title='Other'>
-          <HomeSectionItem
-            title='Support / Ko-fi'
-            to='https://ko-fi.com/hunterparcells'
-            number='08'
-          />
-          <HomeSectionItem
-            title='Cool People'
-            to='/cool'
-            number='09'
-          />
-        </HomeSection>
+        {sections.map((section) => (
+          <HomeSection
+            key={section.title}
+            title={section.title}
+          >
+            {section.items.map((item) => (
+              <HomeSectionItem
+                key={item.to}
+                title={item.title}
+                to={item.to}
+                number={String(counter++).padStart(2, '0')}
+              />
+            ))}
+          </HomeSection>
+        ))}
       </div>
     </>
   );
