@@ -28,9 +28,7 @@ function Cool() {
         </ul>
       </section>
       <section className='flex flex-col gap-4'>
-        <h2 className='font-(family-name:--font-major-mono-display) text-2xl text-stone-100 font-semibold'>
-          Supporters
-        </h2>
+        <h2>Supporters</h2>
         <p>
           A big thanks to everyone who has supported me through Ko-fi. It means more than you know.
         </p>

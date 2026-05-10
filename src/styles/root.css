@@ -8,4 +8,10 @@ html, body {
   p {
     @apply font-light;
   }
+  h1, h2 {
+    @apply font-(family-name:--font-major-mono-display) text-stone-100 font-semibold;
+  }
+  h1 {
+    @apply text-3xl filter drop-shadow-[0_0_8px_#dadada];
+  }
 }
