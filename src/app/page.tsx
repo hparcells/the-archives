@@ -44,29 +44,29 @@ function Home() {
           <HomeSectionItem
             title='More About Me'
             to='/me'
-            number='04'
+            number='05'
           />
           <HomeSectionItem
             title='Tools and Workflow'
             to='/tools'
-            number='04'
+            number='06'
           />
           <HomeSectionItem
             title='This Website'
             to='/website'
-            number='04'
+            number='07'
           />
         </HomeSection>
         <HomeSection title='Other'>
           <HomeSectionItem
             title='Support / Ko-fi'
             to='https://ko-fi.com/hunterparcells'
-            number='04'
+            number='08'
           />
           <HomeSectionItem
             title='Cool People'
             to='/cool'
-            number='04'
+            number='09'
           />
         </HomeSection>
       </div>

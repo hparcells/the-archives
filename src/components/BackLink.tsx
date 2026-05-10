@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 const className =
   'font-(family-name:--font-dm-mono) text-stone-700 hover:text-stone-500 transition-colors duration-200 mb-8 sm:mb-16 tracking-wider block';
@@ -11,10 +12,9 @@ function BackLink({ label, to }: { label: string; to: string }) {
     return (
       <a
         href={to}
-        target='_blank'
         className={clsx(className, 'flex items-center gap-1 text-xs')}
       >
-        ← {label}
+        <ArrowLeft size={12} /> {label}
       </a>
     );
   }
@@ -24,7 +24,7 @@ function BackLink({ label, to }: { label: string; to: string }) {
       href={to}
       className={className}
     >
-      ← {label}
+      <ArrowLeft size={12} /> {label}
     </Link>
   );
 }
