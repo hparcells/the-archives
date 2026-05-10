@@ -8,7 +8,7 @@ function HomeSectionItem({ title, to, number }: { title: string; to: string; num
     <>
       <div className='flex items-center justify-between group py-3 border-b border-stone-900'>
         <div className='flex items-center gap-4'>
-          <span className='font-(family-name:--font-dm-mono) text-xs text-stone-700 group-hover:text-yellow-500 transition-colors duration-200'>
+          <span className='font-(family-name:--font-dm-mono) text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
             {number}
           </span>
           <span className='text-stone-100 group-hover:text-yellow-500 transition-colors duration-200'>

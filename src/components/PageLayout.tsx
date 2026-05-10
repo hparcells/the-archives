@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import BackLink from '@/components/BackLink';
 
 function PageLayout({
@@ -7,8 +9,8 @@ function PageLayout({
   isHome = false
 }: {
   title: string;
-  description: string;
-  children: React.ReactNode;
+  description?: string | ReactNode;
+  children: ReactNode;
   isHome?: boolean;
 }) {
   return (
@@ -18,11 +20,11 @@ function PageLayout({
         to={isHome ? 'https://hunterparcells.com' : '/'}
       />
       <div className='flex flex-col gap-12'>
-        <section className='flex flex-col gap-2'>
-          <h1 className='font-(family-name:--font-major-mono-display) text-3xl text-stone-100 font-semibold text-shadow-lg filter drop-shadow-[0_0_8px_#dadada]'>
+        <section className='flex flex-col gap-4'>
+          <h1 className='font-(family-name:--font-major-mono-display) text-3xl text-stone-100 font-semibold filter drop-shadow-[0_0_8px_#dadada]'>
             {title}
           </h1>
-          <p>{description}</p>
+          {description && (typeof description === 'string' ? <p>{description}</p> : description)}
         </section>
         {children}
       </div>
