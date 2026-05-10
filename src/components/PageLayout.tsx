@@ -22,7 +22,7 @@ function PageLayout({
           <h1 className='font-(family-name:--font-major-mono-display) text-3xl text-stone-300'>
             {title}
           </h1>
-          <p className='font-light'>{description}</p>
+          <p>{description}</p>
         </section>
         {children}
       </div>

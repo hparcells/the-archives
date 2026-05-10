@@ -1,16 +1,11 @@
 @import 'tailwindcss';
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
-.section-items {
-  counter-reset: items;
-}
-.section-item {
-  counter-increment: items;
-}
-.section-item-number::before {
-  content: counter(items, decimal-leading-zero);
+@layer base {
+  p {
+    @apply font-light;
+  }
 }

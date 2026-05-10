@@ -40,15 +40,15 @@ function Home() {
     >
       {sections.map((section) => (
         <HomeSection
-          key={section.title}
           title={section.title}
+          key={section.title}
         >
           {section.items.map((item) => (
             <HomeSectionItem
-              key={item.to}
               title={item.title}
               to={item.to}
               number={String(counter++).padStart(2, '0')}
+              key={item.to}
             />
           ))}
         </HomeSection>
