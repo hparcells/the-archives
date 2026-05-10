@@ -11,14 +11,14 @@ function HomeSectionItem({ title, to, number }: { title: string; to: string; num
           <span className='font-(family-name:--font-dm-mono) text-xs text-stone-700 group-hover:text-yellow-500 transition-colors duration-200'>
             {number}
           </span>
-          <span className='text-stone-300 group-hover:text-yellow-500 transition-colors duration-200'>
+          <span className='text-stone-100 group-hover:text-yellow-500 transition-colors duration-200'>
             {title}
           </span>
         </div>
         <div className='flex items-center gap-4'>
           <ArrowRight
             size={12}
-            className='text-stone-500 group-hover:text-yellow-500 group-hover:scale-125 transition-all duration-200'
+            className='text-stone-400 group-hover:text-yellow-500 group-hover:scale-125 transition-all duration-200'
           />
         </div>
       </div>
