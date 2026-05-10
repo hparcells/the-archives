@@ -1,6 +1,6 @@
-import BackLink from '@/components/BackLink';
 import HomeSection from '@/components/HomeSection';
 import HomeSectionItem from '@/components/HomeSectionItem';
+import PageLayout from '@/components/PageLayout';
 
 const sections = [
   {
@@ -33,37 +33,27 @@ function Home() {
   let counter = 1;
 
   return (
-    <>
-      <BackLink
-        label='hunterparcells.com'
-        to='https://hunterparcells.com'
-      />
-      <div className='flex flex-col gap-12'>
-        <section className='flex flex-col gap-2'>
-          <h1 className='font-(family-name:--font-major-mono-display) text-3xl text-stone-300'>
-            The Archives
-          </h1>
-          <p className='font-light'>
-            Originally one big list of every piece of content I&apos;ve created, now something more.
-          </p>
-        </section>
-        {sections.map((section) => (
-          <HomeSection
-            key={section.title}
-            title={section.title}
-          >
-            {section.items.map((item) => (
-              <HomeSectionItem
-                key={item.to}
-                title={item.title}
-                to={item.to}
-                number={String(counter++).padStart(2, '0')}
-              />
-            ))}
-          </HomeSection>
-        ))}
-      </div>
-    </>
+    <PageLayout
+      title='The Archives'
+      description="Originally one big list of every piece of content I've created, now something more."
+      isHome
+    >
+      {sections.map((section) => (
+        <HomeSection
+          key={section.title}
+          title={section.title}
+        >
+          {section.items.map((item) => (
+            <HomeSectionItem
+              key={item.to}
+              title={item.title}
+              to={item.to}
+              number={String(counter++).padStart(2, '0')}
+            />
+          ))}
+        </HomeSection>
+      ))}
+    </PageLayout>
   );
 }
 
