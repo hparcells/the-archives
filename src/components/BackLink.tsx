@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 const className =
-  'font-(family-name:--font-dm-mono) text-stone-700 hover:text-stone-500 transition-colors duration-200 mb-8 sm:mb-16 tracking-wider block flex items-center gap-1 text-xs';
+  'font-(family-name:--font-dm-mono) text-stone-700 hover:text-stone-500 transition-colors duration-200 mb-8 sm:mb-16 tracking-wider flex items-center gap-1 text-xs';
 
 function BackLink({ label, to }: { label: string; to: string }) {
   const isExternal = /^https?:\/\//.test(to);

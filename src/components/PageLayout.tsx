@@ -19,7 +19,7 @@ function PageLayout({
       />
       <div className='flex flex-col gap-12'>
         <section className='flex flex-col gap-2'>
-          <h1 className='font-(family-name:--font-major-mono-display) text-3xl text-stone-300'>
+          <h1 className='font-(family-name:--font-major-mono-display) text-3xl text-stone-300 font-semibold text-shadow-lg filter drop-shadow-[0_0_8px_#dadada]'>
             {title}
           </h1>
           <p>{description}</p>
