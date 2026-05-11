@@ -4,3 +4,5 @@ services:
     ports:
       - "8014:8014"
     restart: unless-stopped
+    environment:
+      - NOW_URL
