@@ -1,22 +1,33 @@
 import HomeSection from '@/components/HomeSection';
 import HomeSectionItem from '@/components/HomeSectionItem';
 import PageLayout from '@/components/PageLayout';
+import { Chip } from '@/types/types';
 
-const sections = [
+interface SectionItem {
+  title: string;
+  to: string;
+  chip?: Chip;
+}
+interface Section {
+  title: string;
+  items: SectionItem[];
+}
+
+const sections: Section[] = [
   {
     title: 'Content',
     items: [
-      { title: 'Projects', to: '/projects' },
+      { title: 'Projects', to: '/projects', chip: 'under-construction' },
       { title: 'Blog', to: 'https://blog.hunterparcells.com/' },
-      { title: 'Spreadsheets', to: '/spreadsheets' }
+      { title: 'Spreadsheets', to: '/spreadsheets', chip: 'under-construction' }
     ]
   },
   {
     title: 'About',
     items: [
-      { title: 'Now', to: '/now' },
-      { title: 'More About Me', to: '/me' },
-      { title: 'Tools and Workflow', to: '/tools' },
+      { title: 'Now', to: '/now', chip: 'under-construction' },
+      { title: 'More About Me', to: '/me', chip: 'under-construction' },
+      { title: 'Tools and Workflow', to: '/tools', chip: 'under-construction' },
       { title: 'This Website', to: '/website' }
     ]
   },
@@ -48,6 +59,7 @@ function Home() {
               title={item.title}
               to={item.to}
               number={String(counter++).padStart(2, '0')}
+              chip={item.chip}
               key={item.to}
             />
           ))}
