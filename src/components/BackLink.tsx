@@ -1,30 +1,14 @@
-import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-
-const className =
-  'font-(family-name:--font-dm-mono) text-stone-600 hover:text-stone-400 transition-colors duration-200 mb-8 sm:mb-16 tracking-wider flex items-center gap-1 text-xs';
+import SmartLink from './SmartLink';
 
 function BackLink({ label, to }: { label: string; to: string }) {
-  const isExternal = /^https?:\/\//.test(to);
-
-  if (isExternal) {
-    return (
-      <a
-        href={to}
-        className={className}
-      >
-        <ArrowLeft size={12} /> {label}
-      </a>
-    );
-  }
-
   return (
-    <Link
+    <SmartLink
       href={to}
-      className={className}
+      className='font-(family-name:--font-dm-mono) text-stone-600 hover:text-stone-400 transition-colors duration-200 mb-8 sm:mb-16 tracking-wider flex items-center gap-1 text-xs'
     >
       <ArrowLeft size={12} /> {label}
-    </Link>
+    </SmartLink>
   );
 }
 

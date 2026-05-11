@@ -1,11 +1,9 @@
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import SmartLink from './SmartLink';
 
 function HomeSectionItem({ title, to, number }: { title: string; to: string; number: string }) {
-  const isExternal = /^https?:\/\//.test(to);
-
-  const content = (
-    <>
+  return (
+    <SmartLink href={to}>
       <div className='flex items-center justify-between group py-3 border-b border-stone-900'>
         <div className='flex items-center gap-4'>
           <span className='font-(family-name:--font-dm-mono) text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
@@ -22,20 +20,8 @@ function HomeSectionItem({ title, to, number }: { title: string; to: string; num
           />
         </div>
       </div>
-    </>
+    </SmartLink>
   );
-
-  if (isExternal) {
-    return (
-      <a
-        href={to}
-        target='_blank'
-      >
-        {content}
-      </a>
-    );
-  }
-  return <Link href={to}>{content}</Link>;
 }
 
 export default HomeSectionItem;
