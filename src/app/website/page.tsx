@@ -199,77 +199,75 @@ function Website() {
         </p>
       }
     >
-      <section className='flex flex-col gap-4'>
-        <p>
-          On the frontend, the site is built with{' '}
-          <a
-            href='https://nextjs.org/'
-            target='_blank'
-          >
-            Next.js
-          </a>{' '}
-          and{' '}
-          <a
-            href='https://www.typescriptlang.org/'
-            target='_blank'
-          >
-            TypeScript
-          </a>
-          . Styling is done with{' '}
-          <a
-            href='https://tailwindcss.com/'
-            target='_blank'
-          >
-            Tailwind CSS
-          </a>
-          .
-        </p>
-        <p>
-          The site runs on a DigitalOcean droplet, a{' '}
-          <a
-            href='https://ubuntu.com/'
-            target='_blank'
-          >
-            Ubuntu
-          </a>{' '}
-          VPS that hosts this website and all my other non-static projects. Traffic routes through{' '}
-          <a
-            href='https://nginxproxymanager.com/'
-            target='_blank'
-          >
-            Nginx Proxy Manager
-          </a>
-          , SSL is handled automatically via{' '}
-          <a
-            href='https://letsencrypt.org/'
-            target='_blank'
-          >
-            Let&apos;s Encrypt
-          </a>
-          , and the whole thing is monitored by{' '}
-          <a
-            href='https://uptime.kuma.pet/'
-            target='_blank'
-          >
-            Uptime Kuma
-          </a>
-          . The site itself is built locally, packaged into a{' '}
-          <a
-            href='https://www.docker.com/'
-            target='_blank'
-          >
-            Docker
-          </a>
-          image, pushed to{' '}
-          <a
-            href='https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry'
-            target='_blank'
-          >
-            GitHub Container Registry
-          </a>
-          , and pulled onto the server.
-        </p>
-      </section>
+      <p>
+        On the frontend, the site is built with{' '}
+        <a
+          href='https://nextjs.org/'
+          target='_blank'
+        >
+          Next.js
+        </a>{' '}
+        and{' '}
+        <a
+          href='https://www.typescriptlang.org/'
+          target='_blank'
+        >
+          TypeScript
+        </a>
+        . Styling is done with{' '}
+        <a
+          href='https://tailwindcss.com/'
+          target='_blank'
+        >
+          Tailwind CSS
+        </a>
+        .
+      </p>
+      <p>
+        The site runs on a DigitalOcean droplet, a{' '}
+        <a
+          href='https://ubuntu.com/'
+          target='_blank'
+        >
+          Ubuntu
+        </a>{' '}
+        VPS that hosts this website and all my other non-static projects. Traffic routes through{' '}
+        <a
+          href='https://nginxproxymanager.com/'
+          target='_blank'
+        >
+          Nginx Proxy Manager
+        </a>
+        , SSL is handled automatically via{' '}
+        <a
+          href='https://letsencrypt.org/'
+          target='_blank'
+        >
+          Let&apos;s Encrypt
+        </a>
+        , and the whole thing is monitored by{' '}
+        <a
+          href='https://uptime.kuma.pet/'
+          target='_blank'
+        >
+          Uptime Kuma
+        </a>
+        . The site itself is built locally, packaged into a{' '}
+        <a
+          href='https://www.docker.com/'
+          target='_blank'
+        >
+          Docker
+        </a>
+        image, pushed to{' '}
+        <a
+          href='https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry'
+          target='_blank'
+        >
+          GitHub Container Registry
+        </a>
+        , and pulled onto the server.
+      </p>
       <section className='flex flex-col gap-4'>
         <h2>Version History</h2>
         <Timeline items={WEBSITE_VERSIONS} />
