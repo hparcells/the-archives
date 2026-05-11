@@ -10,7 +10,7 @@ function Cool() {
           some not in years, some only once. It doesn&apos;t matter. You shaped who I am today.{' '}
           <em>Per aspera, ad astra.</em>
         </p>
-        <ul className='list-disc pl-5 columns-2'>
+        <ul className='columns-2'>
           <li>Josh</li>
           <li>Caleb</li>
           <li>Jim</li>
@@ -32,7 +32,7 @@ function Cool() {
         <p>
           A big thanks to everyone who has supported me through Ko-fi. It means more than you know.
         </p>
-        <ul className='list-disc pl-5'>
+        <ul>
           <li>G lander</li>
           <li>Binkiklou</li>
           <li>OtterDemon</li>

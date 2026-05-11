@@ -9,9 +9,26 @@ html, body {
     @apply font-light;
   }
   h1, h2 {
-    @apply font-(family-name:--font-major-mono-display) text-stone-100 font-semibold;
+    @apply font-(family-name:--font-major-mono-display) text-stone-200 font-semibold;
   }
   h1 {
     @apply text-3xl filter drop-shadow-[0_0_8px_#dadada];
+  }
+  p {    
+    a {
+      @apply text-stone-400 underline underline-offset-4 transition-colors duration-200 hover:text-stone-200;
+    }
+    strong {
+      @apply font-semibold;
+    }
+  }
+  ul, ol, li {
+    @apply list-disc list-inside;
+  }
+  li {
+    text-indent: -1.5em;
+  }
+  u {
+    @apply underline-offset-4;
   }
 }
