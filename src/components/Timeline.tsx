@@ -4,7 +4,7 @@ import TimelineStep from '@/components/TimelineStep';
 
 function Timeline({ items }: { items: TimelineItem[] }) {
   return (
-    <div>
+    <div className='grid grid-cols-[max-content_1fr]'>
       {items.map((item, i) => (
         <TimelineStep
           key={i}
