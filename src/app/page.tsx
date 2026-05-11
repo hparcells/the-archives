@@ -25,7 +25,7 @@ const sections: Section[] = [
   {
     title: 'About',
     items: [
-      { title: 'Now', to: '/now', chip: 'under-construction' },
+      { title: 'Now', to: '/now' },
       { title: 'More About Me', to: '/me', chip: 'under-construction' },
       { title: 'Tools and Workflow', to: '/tools', chip: 'under-construction' },
       { title: 'This Website', to: '/website' }
