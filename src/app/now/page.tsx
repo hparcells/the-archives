@@ -4,6 +4,12 @@ import ReactMarkdown from 'react-markdown';
 
 import PageLayout from '@/components/PageLayout';
 
+export const dynamic = 'force-dynamic';
+
+interface FrontmatterData {
+  updated: Date;
+}
+
 interface NowData {
   content: string;
   updated: string;
@@ -26,11 +32,14 @@ function getCachedData(isDev: boolean): NowData | null {
 
 function parseFrontmatter(raw: string): NowData {
   const { content, data } = matter(raw);
-  const updated = data.updated;
+  const { updated } = data as FrontmatterData;
 
   return {
     content: content.trim(),
-    updated: updated ?? 'Unknown'
+    updated: format(
+      new Date(updated.getUTCFullYear(), updated.getUTCMonth(), updated.getUTCDate()),
+      'MMMM do, yyyy'
+    )
   };
 }
 
@@ -80,13 +89,9 @@ async function Now() {
     <PageLayout
       title='Now'
       description={
-        <>
-          {updated && (
-            <p>
-              <em>Last updated: {format(updated, 'MMMM dd, yyyy')}</em>
-            </p>
-          )}
-        </>
+        <p>
+          <em>Last updated: {updated}</em>
+        </p>
       }
     >
       <div className='stack-4'>
