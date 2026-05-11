@@ -22,11 +22,8 @@ html, body {
       @apply font-semibold;
     }
   }
-  ul, ol, li {
-    @apply list-disc list-inside;
-  }
-  li {
-    text-indent: -1.5em;
+  ul, ol {
+    @apply list-disc list-outside pl-5;
   }
   u {
     @apply underline-offset-4;
