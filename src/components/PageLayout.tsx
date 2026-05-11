@@ -19,13 +19,16 @@ function PageLayout({
         label={isHome ? 'hunterparcells.com' : 'archives'}
         to={isHome ? 'https://hunterparcells.com' : '/'}
       />
-      <div className='flex flex-col gap-12'>
-        <section className='flex flex-col gap-4'>
-          <h1>{title}</h1>
-          {description && (typeof description === 'string' ? <p>{description}</p> : description)}
-        </section>
-        {children}
-      </div>
+      <section>
+        <h1 className='mb-4'>{title}</h1>
+
+        {description && (
+          <div className='mb-12 stack-4'>
+            {typeof description === 'string' ? <p>{description}</p> : description}
+          </div>
+        )}
+      </section>
+      <div className='flex flex-col gap-12'>{children}</div>
     </>
   );
 }

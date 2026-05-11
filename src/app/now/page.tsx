@@ -4,9 +4,22 @@ function Now() {
   return (
     <PageLayout
       title='Now'
-      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.'
+      description={
+        <>
+          <p>What am I doing in life right now?</p>
+          <p>
+            See also:{' '}
+            <a
+              href='https://nownownow.com/about'
+              target='_blank'
+            >
+              <em>What is a &quot;now page&quot;?</em>
+            </a>
+          </p>
+        </>
+      }
     >
-      <p>Test.</p>
+      <></>
     </PageLayout>
   );
 }

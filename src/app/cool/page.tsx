@@ -3,14 +3,14 @@ import PageLayout from '@/components/PageLayout';
 function Cool() {
   return (
     <PageLayout title='Cool People'>
-      <section className='flex flex-col gap-4'>
+      <section className='stack-4'>
         <p>
           Infinite love and thanks to the following people, in no particular order, for showing me
           the world, making me better, and teaching me to love myself. Some of you I talk to daily,
           some not in years, some only once. It doesn&apos;t matter. You shaped who I am today.{' '}
           <em>Per aspera, ad astra.</em>
         </p>
-        <ul className='columns-2'>
+        <ul className='columns-2 sm:columns-3'>
           <li>Josh</li>
           <li>Caleb</li>
           <li>Jim</li>
@@ -27,7 +27,7 @@ function Cool() {
           <li>Holly</li>
         </ul>
       </section>
-      <section className='flex flex-col gap-4'>
+      <section className='stack-4'>
         <h2>Supporters</h2>
         <p>
           A big thanks to everyone who has supported me through Ko-fi. It means more than you know.

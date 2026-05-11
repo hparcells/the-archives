@@ -4,9 +4,23 @@ function Tools() {
   return (
     <PageLayout
       title='Tools and Workflow'
-      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.'
+      description='The things that power my everyday workflow.'
     >
-      <p>Test.</p>
+      <section className='stack-4'>
+        <h2>Hardware</h2>
+        <p>Test</p>
+        <p>Test</p>
+      </section>
+      <section className='stack-4'>
+        <h2>Software</h2>
+        <p>Test</p>
+        <p>Test</p>
+      </section>
+      <section className='stack-4'>
+        <h2>Automation</h2>
+        <p>Test</p>
+        <p>Test</p>
+      </section>
     </PageLayout>
   );
 }

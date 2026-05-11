@@ -266,7 +266,7 @@ function Website() {
         </a>
         , and pulled onto the server.
       </p>
-      <section className='flex flex-col gap-4'>
+      <section className='stack-4'>
         <h2>Version History</h2>
         <Timeline items={WEBSITE_VERSIONS} />
       </section>

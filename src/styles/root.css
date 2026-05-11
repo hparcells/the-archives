@@ -2,6 +2,7 @@
 
 html, body {
   height: 100%;
+  scrollbar-gutter: stable;
 }
 
 @layer base {
@@ -27,5 +28,9 @@ html, body {
   }
   u {
     @apply underline-offset-4;
+  }
+
+  .stack-4 {
+    @apply flex flex-col gap-4;
   }
 }
