@@ -258,7 +258,7 @@ function Website() {
           target='_blank'
         >
           Docker
-        </a>
+        </a>{' '}
         image, pushed to{' '}
         <a
           href='https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry'
