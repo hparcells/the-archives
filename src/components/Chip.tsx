@@ -18,7 +18,7 @@ function Chip({ type }: { type: ChipType }) {
 
   return (
     <span
-      className={`font-(family-name:--font-dm-mono) text-xs px-2 py-0.5 rounded-sm border transition-all duration-200 ${className}`}
+      className={`font-(family-name:--font-b612-mono) text-xs px-2 py-0.5 rounded-sm border transition-all duration-200 ${className}`}
     >
       {label}
     </span>

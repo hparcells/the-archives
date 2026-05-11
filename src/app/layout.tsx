@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DM_Mono, Major_Mono_Display, Space_Grotesk } from 'next/font/google';
+import { B612_Mono, Major_Mono_Display, Space_Grotesk } from 'next/font/google';
 
 import '@/styles/root.css';
 
@@ -14,10 +14,10 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk'
 });
 
-const dmMono = DM_Mono({
-  weight: ['300', '400', '500'],
+const b612Mono = B612_Mono({
+  weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-dm-mono'
+  variable: '--font-b612-mono'
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ function RootLayout({
   return (
     <html
       lang='en'
-      className={`${majorMonoDisplay.variable} ${spaceGrotesk.className} ${dmMono.variable} bg-mist-950 text-stone-400`}
+      className={`${majorMonoDisplay.variable} ${spaceGrotesk.className} ${b612Mono.variable} bg-mist-950 text-stone-400`}
     >
       <body className='antialiased'>
         <main className='pt-8 sm:pt-16 px-4 pb-4 max-w-4xl w-full m-auto'>{children}</main>

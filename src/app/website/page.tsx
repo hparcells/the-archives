@@ -187,14 +187,12 @@ function Website() {
             Surge.sh
           </a>
           . Now it&apos;s built with{' '}
-          <strong>
-            <a
-              href='https://nextjs.org/'
-              target='_blank'
-            >
-              Next.js
-            </a>
-          </strong>
+          <a
+            href='https://nextjs.org/'
+            target='_blank'
+          >
+            Next.js
+          </a>
           .
         </p>
       }
