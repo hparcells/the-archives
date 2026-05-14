@@ -38,6 +38,35 @@ function Cool() {
           <li>OtterDemon</li>
         </ul>
       </section>
+      <section className='stack-4'>
+        <h2>Influences</h2>
+        <p>People whose work has inspired me, motivated me, or have shaped the way I think.</p>
+        <ul>
+          <li>
+            Pierce Brown, <em>Red Rising</em>
+          </li>
+          <li>
+            Haruichi Furudate, <em>Haikyuu!!</em>
+          </li>
+          <li>
+            Makoto Yukimura, <em>Vinland Saga</em>
+          </li>
+          <li>
+            Mike Boyd, <em>Learn Quick</em>
+          </li>
+          <li>
+            Yes Theory, <em>Seek Discomfort</em>
+          </li>
+          <li>
+            Khaled Hosseini, <em>The Kite Runner</em>
+          </li>
+          <li>
+            Wube Software, <em>Factorio</em>
+          </li>
+          <li>Clayton Jennings</li>
+          <li>Marc Mero</li>
+        </ul>
+      </section>
     </PageLayout>
   );
 }
