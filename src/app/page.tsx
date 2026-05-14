@@ -5,7 +5,7 @@ import { Chip } from '@/types/types';
 
 interface SectionItem {
   title: string;
-  to: string;
+  to?: string;
   chip?: Chip;
 }
 interface Section {
@@ -17,7 +17,7 @@ const sections: Section[] = [
   {
     title: 'Content',
     items: [
-      { title: 'Projects', to: '/projects', chip: 'under-construction' },
+      { title: 'Projects', chip: 'under-construction' },
       { title: 'Blog', to: 'https://blog.hunterparcells.com/' }
     ]
   },
@@ -59,7 +59,7 @@ function Home() {
               to={item.to}
               number={String(counter++).padStart(2, '0')}
               chip={item.chip}
-              key={item.to}
+              key={item.title}
             />
           ))}
         </HomeSection>
