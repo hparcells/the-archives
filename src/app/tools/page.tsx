@@ -7,19 +7,6 @@ function Tools() {
       description='The things that power my everyday workflow.'
     >
       <section className='stack-4'>
-        <h2>Hardware</h2>
-        <p>
-          Current desktop setup can be found at{' '}
-          <a
-            href='https://pcpartpicker.com/user/hparcells/saved/#view=qccBqs'
-            target='_blank'
-          >
-            PCPartPicker
-          </a>
-          .
-        </p>
-      </section>
-      <section className='stack-4'>
         <h2>Software</h2>
         <ul>
           <li>
@@ -31,7 +18,40 @@ function Tools() {
           <li>
             <strong>Notes</strong>: Obsidian and Google Keep
           </li>
+          <li>
+            <strong>Editing</strong>: DaVinci Resolve, Audacity, Paint.NET
+          </li>
+          <li>
+            <strong>Audio</strong>: VoiceMeeter Banana, Audacity, NDI, ReaPlugs, Kilohearts
+          </li>
+          <li>
+            <strong>Fonts</strong>
+            <ul>
+              <li>
+                <strong>Code Editors</strong>: Cascadia Code, JetBrains Mono
+              </li>
+              <li>
+                <strong>Spreadsheets</strong>: IBM Plex Sans, IBM Plex Mono
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Creative</strong>: FL Studio, Krita
+          </li>
         </ul>
+      </section>
+      <section className='stack-4'>
+        <h2>Hardware</h2>
+        <p>
+          Current desktop setup can be found at{' '}
+          <a
+            href='https://pcpartpicker.com/user/hparcells/saved/#view=qccBqs'
+            target='_blank'
+          >
+            PCPartPicker
+          </a>
+          .
+        </p>
       </section>
       <section className='stack-4'>
         <h2>Automation</h2>
@@ -55,12 +75,12 @@ function Tools() {
         </p>
         <p>
           This was inspired by Taran Van Hermet&apos;s Premier Pro&apos;s workflow with AutoHotkey
-          and macro keyboard. More information can be found in his video of the topic:{' '}
+          and macro keyboard. More information can be found in{' '}
           <a
             href='https://www.youtube.com/watch?v=Arn8ExQ2Gjg'
             target='_blank'
           >
-            https://www.youtube.com/watch?v=Arn8ExQ2Gjg
+            his video of the topic
           </a>
           .
         </p>
