@@ -36,6 +36,9 @@ function Cool() {
           <li>G lander</li>
           <li>Binkiklou</li>
           <li>OtterDemon</li>
+          <li>
+            <em>...and others unnamed.</em>
+          </li>
         </ul>
       </section>
       <section className='stack-4'>

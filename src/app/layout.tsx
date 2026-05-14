@@ -37,7 +37,7 @@ function RootLayout({
       className={`${majorMonoDisplay.variable} ${spaceGrotesk.className} ${b612Mono.variable} bg-mist-950 text-stone-400`}
     >
       <body className='antialiased'>
-        <main className='pt-8 sm:pt-16 px-4 pb-4 max-w-4xl w-full m-auto'>{children}</main>
+        <main className='pt-8 sm:pt-16 px-4 pb-8 max-w-4xl w-full m-auto'>{children}</main>
       </body>
     </html>
   );
