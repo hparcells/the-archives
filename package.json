@@ -13,6 +13,7 @@
     "docker:deploy": "npm run docker:build && npm run docker:push"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.6",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.14.0",
