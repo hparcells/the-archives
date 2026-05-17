@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+
+import Chip from './ui/Chip';
 
 import { Project } from '@/types/project';
-import { ArrowRight } from 'lucide-react';
 
 function ProjectSectionItem({ item }: { item: Project }) {
   const [hovered, setHovered] = useState(false);
@@ -35,8 +37,22 @@ function ProjectSectionItem({ item }: { item: Project }) {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.2, ease: 'easeInOut' }}
                 style={{ overflow: 'hidden' }}
+                className='flex flex-col gap-2'
               >
                 <p className='text-sm'>{item.tagline}</p>
+                <div className='flex flex-wrap gap-2'>
+                  {item.technologies.slice(0, 4).map((tech) => {
+                    return (
+                      <Chip
+                        key={tech}
+                        label={tech}
+                      />
+                    );
+                  })}
+                  {item.technologies.length > 4 && (
+                    <Chip label={`+${item.technologies.length - 4} more`} />
+                  )}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
