@@ -23,6 +23,7 @@ function ProjectSection({ title, filter, filterValue, items }: ProjectSectionPro
           key={item.name}
         />
       ))}
+      {items.length === 0 && <p className='mt-2'>No data found.</p>}
     </section>
   );
 }
