@@ -32,31 +32,39 @@ function Projects() {
         title='Featured'
         filter={filter}
         filterValue='all'
-        items={PROJECTS.filter((p) => p.featured)}
+        items={PROJECTS.filter((p) => p.featured).sort((a, b) => b.date.localeCompare(a.date))}
       />
       <ProjectSection
         title='Personal'
         filter={filter}
         filterValue='personal'
-        items={PROJECTS.filter((p) => p.type === 'personal')}
+        items={PROJECTS.filter((p) => p.type === 'personal').sort((a, b) =>
+          b.date.localeCompare(a.date)
+        )}
       />
       <ProjectSection
         title='Professional'
         filter={filter}
         filterValue='professional'
-        items={PROJECTS.filter((p) => p.type === 'professional')}
+        items={PROJECTS.filter((p) => p.type === 'professional').sort((a, b) =>
+          b.date.localeCompare(a.date)
+        )}
       />
       <ProjectSection
         title='Open Source'
         filter={filter}
         filterValue='open-source'
-        items={PROJECTS.filter((p) => p.type === 'open-source')}
+        items={PROJECTS.filter((p) => p.type === 'open-source').sort((a, b) =>
+          b.date.localeCompare(a.date)
+        )}
       />
       <ProjectSection
         title='Academic'
         filter={filter}
         filterValue='academic'
-        items={PROJECTS.filter((p) => p.type === 'academic')}
+        items={PROJECTS.filter((p) => p.type === 'academic').sort((a, b) =>
+          b.date.localeCompare(a.date)
+        )}
       />
     </PageLayout>
   );

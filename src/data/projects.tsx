@@ -2,7 +2,7 @@ import { Project } from '../types/project';
 
 const PERSONAL_PROJECTS: Project[] = [
   {
-    date: '2024-03',
+    date: '2024-03-01',
     name: 'Test Project #1',
     images: [],
     tagline: 'A personal experiment in building something useful from scratch.',
@@ -20,7 +20,7 @@ const PERSONAL_PROJECTS: Project[] = [
     featured: true
   },
   {
-    date: '2023-11',
+    date: '2023-11-01',
     name: 'Test Project #2',
     images: [],
     tagline: 'Exploring creative tools built entirely for personal use.',
@@ -44,7 +44,7 @@ const PERSONAL_PROJECTS: Project[] = [
     featured: false
   },
   {
-    date: '2025-01',
+    date: '2025-01-01',
     name: 'Test Project #3',
     images: [],
     tagline: 'A weekend project that grew into something more.',
@@ -64,7 +64,7 @@ const PERSONAL_PROJECTS: Project[] = [
 
 const PROFESSIONAL_PROJECTS: Project[] = [
   {
-    date: '2024-06',
+    date: '2024-06-01',
     name: 'Test Project #4',
     images: [],
     tagline: 'A client-facing platform redesigned for scale and performance.',
@@ -82,7 +82,7 @@ const PROFESSIONAL_PROJECTS: Project[] = [
     featured: true
   },
   {
-    date: '2023-08',
+    date: '2023-08-01',
     name: 'Test Project #5',
     images: [],
     tagline: 'An internal tool that replaced a manual process for a team of fifty.',
@@ -105,7 +105,7 @@ const PROFESSIONAL_PROJECTS: Project[] = [
     featured: false
   },
   {
-    date: '2024-11',
+    date: '2024-11-01',
     name: 'Test Project #6',
     images: [],
     tagline: 'A data pipeline built to handle real-time analytics at volume.',
@@ -125,7 +125,7 @@ const PROFESSIONAL_PROJECTS: Project[] = [
 
 const OPEN_SOURCE_PROJECTS: Project[] = [
   {
-    date: '2023-05',
+    date: '2023-05-01',
     name: 'Test Project #7',
     images: [],
     tagline: 'A small utility library with a surprisingly large number of users.',
@@ -142,7 +142,7 @@ const OPEN_SOURCE_PROJECTS: Project[] = [
     featured: true
   },
   {
-    date: '2022-09',
+    date: '2022-09-01',
     name: 'Test Project #8',
     images: [],
     tagline: 'A community-maintained fork of an abandoned project people still relied on.',
@@ -165,7 +165,7 @@ const OPEN_SOURCE_PROJECTS: Project[] = [
     featured: false
   },
   {
-    date: '2024-02',
+    date: '2024-02-01',
     name: 'Test Project #9',
     images: [],
     tagline: 'A CLI tool for automating repetitive developer workflows.',
@@ -186,7 +186,7 @@ const OPEN_SOURCE_PROJECTS: Project[] = [
 
 const ACADEMIC_PROJECTS: Project[] = [
   {
-    date: '2022-05',
+    date: '2022-05-01',
     name: 'Test Project #10',
     images: [],
     tagline: 'A research prototype demonstrating a novel approach to graph traversal.',
@@ -204,7 +204,7 @@ const ACADEMIC_PROJECTS: Project[] = [
     featured: false
   },
   {
-    date: '2023-04',
+    date: '2023-04-01',
     name: 'Test Project #11',
     images: [],
     tagline: 'A simulation built for a graduate course in distributed systems.',
@@ -227,7 +227,7 @@ const ACADEMIC_PROJECTS: Project[] = [
     featured: false
   },
   {
-    date: '2024-08',
+    date: '2024-08-01',
     name: 'Test Project #12',
     images: [],
     tagline: 'An ongoing research tool for analyzing large corpora of text.',

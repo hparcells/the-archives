@@ -1,7 +1,53 @@
+'use client';
+
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import { Project } from '@/types/project';
+import { ArrowRight } from 'lucide-react';
 
 function ProjectSectionItem({ item }: { item: Project }) {
-  return <p>Test.</p>;
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      className='py-2 group border-b border-stone-900 transition-colors duration-200 cursor-pointer'
+      onMouseEnter={() => {
+        setHovered(true);
+      }}
+      onMouseLeave={() => {
+        setHovered(false);
+      }}
+    >
+      <div className='flex items-center gap-4'>
+        <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
+          {item.date.substring(0, 4)}
+        </p>
+        <div className='flex flex-col grow min-w-0'>
+          <p className='group-hover:text-yellow-500 transition-colors duration-200 truncate group-hover:whitespace-normal'>
+            {item.name}
+          </p>
+          <AnimatePresence initial={false}>
+            {hovered && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2, ease: 'easeInOut' }}
+                style={{ overflow: 'hidden' }}
+              >
+                <p className='text-sm'>{item.tagline}</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        <ArrowRight
+          size={12}
+          className='shrink-0 text-stone-400 group-hover:text-yellow-500 group-hover:scale-125 transition-all duration-200'
+        />
+      </div>
+    </div>
+  );
 }
 
 export default ProjectSectionItem;
