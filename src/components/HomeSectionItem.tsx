@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 
-import Chip from '@/components/Chip';
+import Chip from '@/components/ui/Chip';
 import SmartLink from '@/components/SmartLink';
 
 import { Chip as ChipType } from '@/types/types';

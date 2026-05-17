@@ -1,12 +1,63 @@
+'use client';
+
+import { useState } from 'react';
+
 import PageLayout from '@/components/PageLayout';
+import ProjectSection from '@/components/ProjectSection';
+import SegmentedControl from '@/components/ui/SegmentedControl';
+
+import { PROJECTS } from '@/data/projects';
 
 function Projects() {
+  const [filter, setFilter] = useState<string>('all');
+
   return (
     <PageLayout
       title='Projects'
-      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      description='Everything I have ever made... or at least the things I could find on my hard drives.'
     >
-      <p>Test.</p>
+      <SegmentedControl
+        data={[
+          { label: 'All', value: 'all' },
+          { label: 'Personal', value: 'personal' },
+          { label: 'Professional', value: 'professional' },
+          { label: 'Open Source', value: 'open-source' },
+          { label: 'Academic', value: 'academic' }
+        ]}
+        value={filter}
+        onChange={setFilter}
+      />
+
+      <ProjectSection
+        title='Featured'
+        filter={filter}
+        filterValue='all'
+        items={PROJECTS.filter((p) => p.featured)}
+      />
+      <ProjectSection
+        title='Personal'
+        filter={filter}
+        filterValue='personal'
+        items={PROJECTS.filter((p) => p.type === 'personal')}
+      />
+      <ProjectSection
+        title='Professional'
+        filter={filter}
+        filterValue='professional'
+        items={PROJECTS.filter((p) => p.type === 'professional')}
+      />
+      <ProjectSection
+        title='Open Source'
+        filter={filter}
+        filterValue='open-source'
+        items={PROJECTS.filter((p) => p.type === 'open-source')}
+      />
+      <ProjectSection
+        title='Academic'
+        filter={filter}
+        filterValue='academic'
+        items={PROJECTS.filter((p) => p.type === 'academic')}
+      />
     </PageLayout>
   );
 }
