@@ -8,6 +8,7 @@ import { X, CodeXml, ExternalLink, GitPullRequest, AlertCircle, PencilLine } fro
 import SectionHeader from './SectionHeader';
 import ProjectTechStackList from './ProjectTechStackList';
 import Button from './ui/Button';
+import Carousel from './ui/Carousel';
 
 import { Project, PROJECT_STATUS_LABELS, PROJECT_TYPE_LABELS } from '@/types/project';
 
@@ -64,6 +65,11 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
               <p className='text-sm'>{item.tagline}</p>
             </section>
             <div className='px-6 pt-4 pb-6 stack-6'>
+              {item.images.length > 0 && (
+                <section>
+                  <Carousel images={item.images} />
+                </section>
+              )}
               <section className='stack-2'>
                 <SectionHeader title='Details' />
                 <div className='grid grid-cols-2 gap-4'>
