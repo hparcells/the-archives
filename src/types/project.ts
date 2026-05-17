@@ -1,12 +1,21 @@
 import { ReactNode } from 'react';
 
 export type ProjectStatus =
-  | 'active'
-  | 'in-progress'
-  | 'archived'
   | 'planned'
-  | 'on-hold'
-  | 'cancelled';
+  | 'in-progress'
+  | 'complete'
+  | 'active'
+  | 'archived'
+  | 'on-hold';
+
+export const PROJECT_STATUS_LABELS: Record<ProjectStatus, string> = {
+  planned: 'Planned',
+  'in-progress': 'In Progress',
+  complete: 'Complete',
+  active: 'Active',
+  archived: 'Archived',
+  'on-hold': 'On Hold'
+};
 
 export type ProjectType = 'personal' | 'professional' | 'open-source' | 'academic';
 
@@ -22,6 +31,7 @@ interface ProjectLinks {
   issue?: string;
   pullRequest?: string;
   live?: string;
+  blog?: string;
 }
 
 export interface Project {

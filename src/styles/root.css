@@ -35,6 +35,9 @@ html, body {
     @apply underline-offset-4;
   }
 
+  .stack-1 {
+    @apply flex flex-col gap-1;
+  }
   .stack-2 {
     @apply flex flex-col gap-2;
   }

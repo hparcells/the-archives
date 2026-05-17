@@ -9,7 +9,7 @@ import SectionHeader from './SectionHeader';
 import ProjectTechStackList from './ProjectTechStackList';
 import Button from './ui/Button';
 
-import { Project, PROJECT_TYPE_LABELS } from '@/types/project';
+import { Project, PROJECT_STATUS_LABELS, PROJECT_TYPE_LABELS } from '@/types/project';
 
 interface ProjectModalProps {
   item: Project | null;
@@ -64,6 +64,23 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
               <p className='text-sm'>{item.tagline}</p>
             </section>
             <div className='px-6 pt-4 pb-6 stack-6'>
+              <section className='stack-2'>
+                <SectionHeader title='Details' />
+                <div className='grid grid-cols-2 gap-4'>
+                  <div>
+                    <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
+                      Date
+                    </p>
+                    <p className='text-sm'>{item.date}</p>
+                  </div>
+                  <div>
+                    <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
+                      Status
+                    </p>
+                    <p className='text-sm'>{PROJECT_STATUS_LABELS[item.status]}</p>
+                  </div>
+                </div>
+              </section>
               <section className='stack-2'>
                 <SectionHeader title='About' />
                 {item.description}
