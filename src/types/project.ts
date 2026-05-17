@@ -10,6 +10,13 @@ export type ProjectStatus =
 
 export type ProjectType = 'personal' | 'professional' | 'open-source' | 'academic';
 
+export const PROJECT_TYPE_LABELS: Record<ProjectType, string> = {
+  personal: 'Personal',
+  professional: 'Professional',
+  'open-source': 'Open Source',
+  academic: 'Academic'
+};
+
 interface ProjectLinks {
   github?: string;
   live?: string;

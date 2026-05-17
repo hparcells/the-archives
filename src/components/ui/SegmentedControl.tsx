@@ -36,7 +36,7 @@ function SegmentedControl({
           onClick={() => {
             handleClick(item.value);
           }}
-          className={`font-(family-name:--font-b612-mono) text-xs px-3 py-1 rounded-sm border transition-all duration-200 cursor-pointer ${item.value === activeValue ? 'text-yellow-500 border-yellow-500' : 'text-stone-600 border-stone-600 hover:text-stone-400 hover:border-stone-400'}`}
+          className={`font-(family-name:--font-b612-mono) text-xs px-3 py-1 rounded-sm border transition-all duration-200 cursor-pointer ${item.value === activeValue ? 'text-yellow-500 border-yellow-500' : 'text-stone-600 border-stone-800 hover:text-stone-400 hover:border-stone-600'}`}
         >
           {item.label}
         </button>

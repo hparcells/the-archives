@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+@theme {
+  --text-2xs: 0.625rem;
+  /* --text-2xs: 0.6875rem; */
+}
+
 html, body {
   height: 100%;
   scrollbar-gutter: stable;
@@ -30,7 +35,13 @@ html, body {
     @apply underline-offset-4;
   }
 
+  .stack-2 {
+    @apply flex flex-col gap-2;
+  }
   .stack-4 {
     @apply flex flex-col gap-4;
+  }
+  .stack-4 {
+    @apply flex flex-col gap-6;
   }
 }
