@@ -19,10 +19,10 @@ function Projects() {
       <SegmentedControl
         data={[
           { label: 'All', value: 'all' },
-          { label: 'Personal', value: 'personal' },
           { label: 'Professional', value: 'professional' },
-          { label: 'Open Source', value: 'open-source' },
-          { label: 'Academic', value: 'academic' }
+          { label: 'Personal', value: 'personal' },
+          { label: 'Academic', value: 'academic' },
+          { label: 'Open Source', value: 'open-source' }
         ]}
         value={filter}
         onChange={setFilter}
@@ -35,14 +35,6 @@ function Projects() {
         items={PROJECTS.filter((p) => p.featured).sort((a, b) => b.date.localeCompare(a.date))}
       />
       <ProjectSection
-        title='Personal'
-        filter={filter}
-        filterValue='personal'
-        items={PROJECTS.filter((p) => p.type === 'personal').sort((a, b) =>
-          b.date.localeCompare(a.date)
-        )}
-      />
-      <ProjectSection
         title='Professional'
         filter={filter}
         filterValue='professional'
@@ -51,10 +43,10 @@ function Projects() {
         )}
       />
       <ProjectSection
-        title='Open Source'
+        title='Personal'
         filter={filter}
-        filterValue='open-source'
-        items={PROJECTS.filter((p) => p.type === 'open-source').sort((a, b) =>
+        filterValue='personal'
+        items={PROJECTS.filter((p) => p.type === 'personal').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
       />
@@ -63,6 +55,14 @@ function Projects() {
         filter={filter}
         filterValue='academic'
         items={PROJECTS.filter((p) => p.type === 'academic').sort((a, b) =>
+          b.date.localeCompare(a.date)
+        )}
+      />
+      <ProjectSection
+        title='Open Source'
+        filter={filter}
+        filterValue='open-source'
+        items={PROJECTS.filter((p) => p.type === 'open-source').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
       />

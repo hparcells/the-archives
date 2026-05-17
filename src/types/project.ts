@@ -35,13 +35,13 @@ interface ProjectLinks {
 }
 
 export interface Project {
+  type: ProjectType;
   date: string;
   name: string;
-  images: string[];
   tagline: string;
-  description: ReactNode;
+  images: string[];
   status: ProjectStatus;
-  type: ProjectType;
+  description: ReactNode;
   technologies: string[];
   links: ProjectLinks;
   featured: boolean;

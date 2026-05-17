@@ -53,10 +53,12 @@ function ProjectSectionItem({ item }: { item: Project }) {
                   className='flex flex-col gap-2'
                 >
                   <p className='text-sm'>{item.tagline}</p>
-                  <ProjectTechStackList
-                    technologies={item.technologies}
-                    maxLength={4}
-                  />
+                  {item.technologies.length > 0 && (
+                    <ProjectTechStackList
+                      technologies={item.technologies}
+                      maxLength={4}
+                    />
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>

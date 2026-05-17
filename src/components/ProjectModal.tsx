@@ -85,10 +85,12 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
                 <SectionHeader title='About' />
                 {item.description}
               </section>
-              <section className='stack-2'>
-                <SectionHeader title='Tech Stack' />
-                <ProjectTechStackList technologies={item.technologies} />
-              </section>
+              {item.technologies.length > 0 && (
+                <section className='stack-2'>
+                  <SectionHeader title='Tech Stack' />
+                  <ProjectTechStackList technologies={item.technologies} />
+                </section>
+              )}
               {Object.keys(item.links).length > 0 && (
                 <section className='stack-2'>
                   <SectionHeader title='Links' />

@@ -34,6 +34,9 @@ html, body {
   u {
     @apply underline-offset-4;
   }
+  code {
+    @apply font-(family-name:--font-b612-mono) text-sm text-stone-400 bg-stone-800/50 rounded px-1 py-0.5;
+  }
 
   .stack-1 {
     @apply flex flex-col gap-1;
