@@ -19,6 +19,8 @@ export const PROJECT_TYPE_LABELS: Record<ProjectType, string> = {
 
 interface ProjectLinks {
   github?: string;
+  issue?: string;
+  pullRequest?: string;
   live?: string;
 }
 

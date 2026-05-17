@@ -3,10 +3,11 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, CodeXml, ExternalLink, GitPullRequest, AlertCircle, PencilLine } from 'lucide-react';
 
 import SectionHeader from './SectionHeader';
 import ProjectTechStackList from './ProjectTechStackList';
+import Button from './ui/Button';
 
 import { Project, PROJECT_TYPE_LABELS } from '@/types/project';
 
@@ -59,10 +60,10 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
               <p className='font-(family-name:--font-b612-mono) text-2xs text-yellow-500'>
                 {PROJECT_TYPE_LABELS[item.type]} {'//'} {item.date.substring(0, 4)}
               </p>
-              <p className='font-semibold text-lg'>{item.name}</p>
+              <p className='font-semibold text-lg text-stone-200'>{item.name}</p>
               <p className='text-sm'>{item.tagline}</p>
             </section>
-            <div className='px-6 pt-4 pb-6 stack-4'>
+            <div className='px-6 pt-4 pb-6 stack-6'>
               <section className='stack-2'>
                 <SectionHeader title='About' />
                 {item.description}
@@ -71,6 +72,60 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
                 <SectionHeader title='Tech Stack' />
                 <ProjectTechStackList technologies={item.technologies} />
               </section>
+              {Object.keys(item.links).length > 0 && (
+                <section className='stack-2'>
+                  <SectionHeader title='Links' />
+                  <div className='flex gap-2'>
+                    {item.links.github && (
+                      <Button
+                        icon={CodeXml}
+                        href={item.links.github}
+                        target='_blank'
+                      >
+                        GitHub
+                      </Button>
+                    )}
+                    {item.links.issue && (
+                      <Button
+                        icon={AlertCircle}
+                        href={item.links.issue}
+                        target='_blank'
+                      >
+                        Issue
+                      </Button>
+                    )}
+                    {item.links.pullRequest && (
+                      <Button
+                        icon={GitPullRequest}
+                        href={item.links.pullRequest}
+                        target='_blank'
+                      >
+                        Pull Request
+                      </Button>
+                    )}
+                    {item.links.live && (
+                      <Button
+                        icon={ExternalLink}
+                        variant='outline'
+                        href={item.links.live}
+                        target='_blank'
+                      >
+                        Live Site
+                      </Button>
+                    )}
+                    {item.links.blog && (
+                      <Button
+                        icon={PencilLine}
+                        variant='outline'
+                        href={item.links.blog}
+                        target='_blank'
+                      >
+                        Blog Post
+                      </Button>
+                    )}
+                  </div>
+                </section>
+              )}
             </div>
           </motion.div>
         </motion.div>

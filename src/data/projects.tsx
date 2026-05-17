@@ -241,7 +241,12 @@ const ACADEMIC_PROJECTS: Project[] = [
     status: 'in-progress',
     type: 'academic',
     technologies: ['Python', 'Next.js', 'MongoDB', 'test', 'test2'],
-    links: {},
+    links: {
+      github: 'https://github.com',
+      pullRequest: 'https://github.com',
+      issue: 'https://github.com',
+      blog: 'https://github.com'
+    },
     featured: true
   }
 ];

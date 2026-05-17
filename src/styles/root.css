@@ -41,7 +41,7 @@ html, body {
   .stack-4 {
     @apply flex flex-col gap-4;
   }
-  .stack-4 {
+  .stack-6 {
     @apply flex flex-col gap-6;
   }
 }
