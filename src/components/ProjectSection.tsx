@@ -17,12 +17,19 @@ function ProjectSection({ title, filter, filterValue, items }: ProjectSectionPro
   return (
     <section>
       <SectionHeader title={title} />
-      {items.map((item) => (
-        <ProjectSectionItem
-          item={item}
-          key={item.name}
-        />
-      ))}
+      {items
+        .sort((a, b) => {
+          const dateAToUse = a.startDate || a.date;
+          const dateBToUse = b.startDate || b.date;
+
+          return new Date(dateBToUse).getTime() - new Date(dateAToUse).getTime();
+        })
+        .map((item) => (
+          <ProjectSectionItem
+            item={item}
+            key={item.name}
+          />
+        ))}
       {items.length === 0 && <p className='mt-2'>No data found.</p>}
     </section>
   );

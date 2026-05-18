@@ -73,6 +73,14 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
               <section className='stack-2'>
                 <SectionHeader title='Details' />
                 <div className='grid grid-cols-2 gap-4'>
+                  {item.startDate && item.date !== item.startDate && (
+                    <div>
+                      <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
+                        Start Date
+                      </p>
+                      <p className='text-sm'>{item.startDate}</p>
+                    </div>
+                  )}
                   <div>
                     <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
                       Date

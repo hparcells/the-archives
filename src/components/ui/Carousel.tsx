@@ -22,10 +22,10 @@ function Carousel({ images }: CarouselProps) {
   }
 
   return (
-    <div className='relative h-72 w-full overflow-hidden rounded-sm border border-stone-800 bg-stone-900'>
+    <div className='relative h-48 sm:h-72 w-full overflow-hidden rounded-sm border border-stone-800 bg-stone-900'>
       {images.map((src, i) => (
         <Image
-          src={src}
+          src={`/images/projects/${src}`}
           alt={`Screenshot #${i + 1}`}
           fill
           sizes='(max-width: 672px) 100vw, 620px'

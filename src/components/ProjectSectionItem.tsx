@@ -14,6 +14,8 @@ function ProjectSectionItem({ item }: { item: Project }) {
   const [hovered, setHovered] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const dateToUse = item.startDate || item.date;
+
   return (
     <>
       <ProjectModal
@@ -36,7 +38,7 @@ function ProjectSectionItem({ item }: { item: Project }) {
       >
         <div className='flex items-center gap-4'>
           <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
-            {item.date.substring(0, 4)}
+            {dateToUse.substring(0, 4)}
           </p>
           <div className='flex flex-col grow min-w-0'>
             <p className='group-hover:text-yellow-500 transition-colors duration-200 truncate group-hover:whitespace-normal'>

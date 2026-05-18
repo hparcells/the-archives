@@ -37,6 +37,7 @@ interface ProjectLinks {
 export interface Project {
   type: ProjectType;
   date: string;
+  startDate: string;
   name: string;
   tagline: string;
   images: string[];
