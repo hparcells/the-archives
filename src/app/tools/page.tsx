@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
+
 import PageLayout from '@/components/PageLayout';
+
+export const metadata: Metadata = {
+  title: 'Tools and Workflow'
+};
 
 function Tools() {
   return (

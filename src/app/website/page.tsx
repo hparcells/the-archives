@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
+
 import PageLayout from '@/components/PageLayout';
 import Timeline from '@/components/Timeline';
+
+export const metadata: Metadata = {
+  title: 'This Website'
+};
 
 const WEBSITE_VERSIONS = [
   {

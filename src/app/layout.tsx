@@ -22,7 +22,10 @@ const b612Mono = B612_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'The Archives - Hunter Parcells',
+  title: {
+    default: 'The Archives',
+    template: '%s | The Archives'
+  },
   description:
     "A running index of everything I've built, written, and thought about: projects, writing, tools, and more. Updated often."
 };

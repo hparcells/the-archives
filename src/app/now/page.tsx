@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { format } from 'date-fns';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
@@ -5,6 +6,10 @@ import ReactMarkdown from 'react-markdown';
 import PageLayout from '@/components/PageLayout';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Now'
+};
 
 interface FrontmatterData {
   updated: Date;
