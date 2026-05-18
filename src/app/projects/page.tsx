@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+import Alert from '@/components/ui/Alert';
 import PageLayout from '@/components/PageLayout';
 import ProjectSection from '@/components/ProjectSection';
 import SegmentedControl from '@/components/ui/SegmentedControl';
@@ -14,7 +15,17 @@ function Projects() {
   return (
     <PageLayout
       title='Projects'
-      description='Everything I have ever made... or at least the things I could find on my hard drives.'
+      description={
+        <>
+          <p>
+            Everything I have ever made... or at least the things I could find on my hard drives.
+          </p>
+          <Alert variant='warning'>
+            This page is a <strong>work in progress</strong>. Some projects may be missing or have
+            incomplete information.
+          </Alert>
+        </>
+      }
     >
       <SegmentedControl
         data={[
