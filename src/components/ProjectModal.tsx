@@ -57,7 +57,7 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
             >
               <X size={16} />
             </button>
-            <section className='border-b border-stone-800 px-6 pt-6 pb-4 flex flex-col'>
+            <section className='sticky top-0 z-1 bg-stone-950 border-b border-stone-800 px-6 pt-6 pb-4 flex flex-col'>
               <p className='font-(family-name:--font-b612-mono) text-2xs text-yellow-500'>
                 {PROJECT_TYPE_LABELS[item.type]} {'//'} {item.date.substring(0, 4)}
               </p>
