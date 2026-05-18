@@ -201,9 +201,9 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
   {
     type: 'professional',
     date: '2025-08-15',
-    startDate: '2025-05-19',
+    startDate: '2025-05',
     name: 'SMT Build Tracking Tool',
-    tagline: '',
+    tagline: 'Ignition-based build tracking, management, and monitoring.',
     images: ['smt-build-tracking.png'],
     status: 'complete',
     description: (
@@ -241,7 +241,7 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
   {
     type: 'professional',
     date: '2025-08-15',
-    startDate: '2025',
+    startDate: '2025-06',
     name: 'Ignition Diag Tracking Application',
     tagline: 'Ignition-based diagnostic data entry, tracking, and analytics.',
     images: [],
@@ -254,13 +254,22 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
           need for engineers to manually maintain a separate parts configuration.
         </p>
         <p>
-          Added a timer to each diagnostic entry, tracking how long a technician spent analyzing a
-          part.
-        </p>
-        <p>
           Migrated all existing diagnostic records from the original application&apos;s database,
           ensuring no historical data was lost in the transition.
         </p>
+        <p>
+          <strong>New Features</strong>
+        </p>
+        <ul>
+          <li>
+            Expanded the application&apos;s scope beyond Post SMT to include data from an additional
+            testing team.
+          </li>
+          <li>
+            Added a timer to each diagnostic entry, tracking how long a technician spent analyzing a
+            part.
+          </li>
+        </ul>
       </>
     ),
     technologies: ['Ignition Perspective', 'Microsoft SQL Server', 'Jython', 'JavaScript'],

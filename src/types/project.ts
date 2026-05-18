@@ -17,13 +17,14 @@ export const PROJECT_STATUS_LABELS: Record<ProjectStatus, string> = {
   'on-hold': 'On Hold'
 };
 
-export type ProjectType = 'personal' | 'professional' | 'open-source' | 'academic';
+export type ProjectType = 'personal' | 'professional' | 'open-source' | 'academic' | 'freelance';
 
 export const PROJECT_TYPE_LABELS: Record<ProjectType, string> = {
   personal: 'Personal',
   professional: 'Professional',
   'open-source': 'Open Source',
-  academic: 'Academic'
+  academic: 'Academic',
+  freelance: 'Freelance'
 };
 
 interface ProjectLinks {

@@ -12,6 +12,64 @@ import Carousel from './ui/Carousel';
 
 import { Project, PROJECT_STATUS_LABELS, PROJECT_TYPE_LABELS } from '@/types/project';
 
+function ProjectModalLinks({ links }: { links: Project['links'] }) {
+  if (Object.keys(links).length === 0) return null;
+  return (
+    <section className='stack-2'>
+      <SectionHeader title='Links' />
+      <div className='flex gap-2'>
+        {links.github && (
+          <Button
+            icon={CodeXml}
+            href={links.github}
+            target='_blank'
+          >
+            GitHub
+          </Button>
+        )}
+        {links.issue && (
+          <Button
+            icon={AlertCircle}
+            href={links.issue}
+            target='_blank'
+          >
+            Issue
+          </Button>
+        )}
+        {links.pullRequest && (
+          <Button
+            icon={GitPullRequest}
+            href={links.pullRequest}
+            target='_blank'
+          >
+            Pull Request
+          </Button>
+        )}
+        {links.live && (
+          <Button
+            icon={ExternalLink}
+            variant='outline'
+            href={links.live}
+            target='_blank'
+          >
+            Live Site
+          </Button>
+        )}
+        {links.blog && (
+          <Button
+            icon={PencilLine}
+            variant='outline'
+            href={links.blog}
+            target='_blank'
+          >
+            Blog Post
+          </Button>
+        )}
+      </div>
+    </section>
+  );
+}
+
 interface ProjectModalProps {
   item: Project | null;
   onClose: () => void;
@@ -105,60 +163,7 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
                   <ProjectTechStackList technologies={item.technologies} />
                 </section>
               )}
-              {Object.keys(item.links).length > 0 && (
-                <section className='stack-2'>
-                  <SectionHeader title='Links' />
-                  <div className='flex gap-2'>
-                    {item.links.github && (
-                      <Button
-                        icon={CodeXml}
-                        href={item.links.github}
-                        target='_blank'
-                      >
-                        GitHub
-                      </Button>
-                    )}
-                    {item.links.issue && (
-                      <Button
-                        icon={AlertCircle}
-                        href={item.links.issue}
-                        target='_blank'
-                      >
-                        Issue
-                      </Button>
-                    )}
-                    {item.links.pullRequest && (
-                      <Button
-                        icon={GitPullRequest}
-                        href={item.links.pullRequest}
-                        target='_blank'
-                      >
-                        Pull Request
-                      </Button>
-                    )}
-                    {item.links.live && (
-                      <Button
-                        icon={ExternalLink}
-                        variant='outline'
-                        href={item.links.live}
-                        target='_blank'
-                      >
-                        Live Site
-                      </Button>
-                    )}
-                    {item.links.blog && (
-                      <Button
-                        icon={PencilLine}
-                        variant='outline'
-                        href={item.links.blog}
-                        target='_blank'
-                      >
-                        Blog Post
-                      </Button>
-                    )}
-                  </div>
-                </section>
-              )}
+              <ProjectModalLinks links={item.links} />
             </div>
           </motion.div>
         </motion.div>

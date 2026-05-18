@@ -21,6 +21,7 @@ function Projects() {
           { label: 'All', value: 'all' },
           { label: 'Professional', value: 'professional' },
           { label: 'Personal', value: 'personal' },
+          { label: 'Freelance', value: 'freelance' },
           { label: 'Academic', value: 'academic' },
           { label: 'Open Source', value: 'open-source' }
         ]}
@@ -47,6 +48,14 @@ function Projects() {
         filter={filter}
         filterValue='personal'
         items={PROJECTS.filter((p) => p.type === 'personal').sort((a, b) =>
+          b.date.localeCompare(a.date)
+        )}
+      />
+      <ProjectSection
+        title='Freelance'
+        filter={filter}
+        filterValue='freelance'
+        items={PROJECTS.filter((p) => p.type === 'freelance').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
       />
