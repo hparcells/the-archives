@@ -20,7 +20,7 @@ function ProjectSectionItem({ item }: { item: Project }) {
   function handleItemClick() {
     setModalOpen(true);
     sendGAEvent('event', 'project_view', {
-      project_name: item.name
+      value: item.name
     });
   }
 
