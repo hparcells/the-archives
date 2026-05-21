@@ -54,40 +54,6 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
   },
   {
     type: 'professional',
-    date: '2024-08-15',
-    startDate: '2024-07-16',
-    name: 'Reflash Inventory Management System',
-    tagline: 'PWA to log inventory movement of parts.',
-    images: [],
-    status: 'archived',
-    description: (
-      <>
-        <p>
-          Developed to keep a record of inventory movement of parts within a specific area of the
-          factory floor. Operators scanned data matrix codes inscribed on PCBs to log movements into
-          the database. Increased visibility by calculating waiting time for each part.
-        </p>
-        <p>
-          On desktop viewports, implemented the ability to view analytics as well as allow
-          authorized users to modify application configuration options.
-        </p>
-      </>
-    ),
-    technologies: [
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'Progressive Web App',
-      'Microsoft SQL Server',
-      'Prisma',
-      'shadcn',
-      'Recharts'
-    ],
-    links: {},
-    featured: false
-  },
-  {
-    type: 'professional',
     date: '2024-07-15',
     startDate: '2024-07-16',
     name: 'Job Setup Verification Tool',
@@ -106,32 +72,6 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
       'Prisma',
       'shadcn',
       'Jest'
-    ],
-    links: {},
-    featured: false
-  },
-  {
-    type: 'professional',
-    date: '2024-08-13',
-    startDate: '2024-07-25',
-    name: 'Ignition Reporting Application',
-    tagline: 'KPI visualization web application for production line data.',
-    images: [],
-    status: 'complete',
-    description: (
-      <p>
-        A web application version of the Ignition Tables Import Tool. Imported production line data
-        into a Microsoft SQL Server database for visualization. Automatically parsed Excel
-        spreadsheet data to insert into appropriate tables. Visualized KPIs using Recharts.
-      </p>
-    ),
-    technologies: [
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'Microsoft SQL Server',
-      'shadcn',
-      'Recharts'
     ],
     links: {},
     featured: false
@@ -174,6 +114,66 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
   },
   {
     type: 'professional',
+    date: '2024-08-13',
+    startDate: '2024-07-25',
+    name: 'Ignition Reporting Application',
+    tagline: 'KPI visualization web application for production line data.',
+    images: [],
+    status: 'complete',
+    description: (
+      <p>
+        A web application version of the Ignition Tables Import Tool. Imported production line data
+        into a Microsoft SQL Server database for visualization. Automatically parsed Excel
+        spreadsheet data to insert into appropriate tables. Visualized KPIs using Recharts.
+      </p>
+    ),
+    technologies: [
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'Microsoft SQL Server',
+      'shadcn',
+      'Recharts'
+    ],
+    links: {},
+    featured: false
+  },
+  {
+    type: 'professional',
+    date: '2024-08-15',
+    startDate: '2024-07-16',
+    name: 'Reflash Inventory Management System',
+    tagline: 'PWA to log inventory movement of parts.',
+    images: [],
+    status: 'archived',
+    description: (
+      <>
+        <p>
+          Developed to keep a record of inventory movement of parts within a specific area of the
+          factory floor. Operators scanned data matrix codes inscribed on PCBs to log movements into
+          the database. Increased visibility by calculating waiting time for each part.
+        </p>
+        <p>
+          On desktop viewports, implemented the ability to view analytics as well as allow
+          authorized users to modify application configuration options.
+        </p>
+      </>
+    ),
+    technologies: [
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'Progressive Web App',
+      'Microsoft SQL Server',
+      'Prisma',
+      'shadcn',
+      'Recharts'
+    ],
+    links: {},
+    featured: false
+  },
+  {
+    type: 'professional',
     date: '2025-05-16',
     startDate: '2025-05-09',
     name: 'AOI Failure Classification Model',
@@ -198,6 +198,7 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     links: {},
     featured: false
   },
+
   {
     type: 'professional',
     date: '2025-08-15',
