@@ -15,6 +15,7 @@ ENV PORT=8014
 
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 
 EXPOSE 8014
 CMD ["node", "server.js"]
