@@ -71,11 +71,14 @@ function ProjectModalLinks({ links }: { links: Project['links'] }) {
 }
 
 interface ProjectModalProps {
-  item: Project | null;
+  item: Project;
+  isOpen: boolean;
   onClose: () => void;
 }
 
-function ProjectModal({ item, onClose }: ProjectModalProps) {
+function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
+  const dateToUse = item.startDate || item.date;
+
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') {
@@ -90,7 +93,7 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
 
   return createPortal(
     <AnimatePresence>
-      {item && (
+      {isOpen && (
         <motion.div
           className='fixed inset-0 bg-black/60 flex items-center justify-center z-40'
           initial={{ opacity: 0 }}
@@ -117,7 +120,7 @@ function ProjectModal({ item, onClose }: ProjectModalProps) {
             </button>
             <section className='sticky top-0 z-1 bg-stone-950 border-b border-stone-800 px-6 pt-6 pb-4 flex flex-col'>
               <p className='font-(family-name:--font-b612-mono) text-2xs text-yellow-500'>
-                {PROJECT_TYPE_LABELS[item.type]} {'//'} {item.date.substring(0, 4)}
+                {PROJECT_TYPE_LABELS[item.type]} {'//'} {dateToUse.substring(0, 4)}
               </p>
               <p className='font-semibold text-lg text-stone-200'>{item.name}</p>
               <p className='text-sm'>{item.tagline}</p>

@@ -13,12 +13,12 @@ import { sendGAEvent } from '@next/third-parties/google';
 
 function ProjectSectionItem({ item }: { item: Project }) {
   const [hovered, setHovered] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const dateToUse = item.startDate || item.date;
 
   function handleItemClick() {
-    setModalOpen(true);
+    setIsModalOpen(true);
     sendGAEvent('event', 'project_view', {
       value: item.name
     });
@@ -27,9 +27,10 @@ function ProjectSectionItem({ item }: { item: Project }) {
   return (
     <>
       <ProjectModal
-        item={modalOpen ? item : null}
+        item={item}
+        isOpen={isModalOpen}
         onClose={() => {
-          setModalOpen(false);
+          setIsModalOpen(false);
         }}
       />
       <div
@@ -51,7 +52,7 @@ function ProjectSectionItem({ item }: { item: Project }) {
               {item.name}
             </p>
             <AnimatePresence initial={false}>
-              {(hovered || modalOpen) && (
+              {(hovered || isModalOpen) && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
