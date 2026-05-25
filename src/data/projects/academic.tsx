@@ -156,7 +156,7 @@ export const ACADEMIC_PROJECTS: Project[] = [
     type: 'academic',
     date: '2026-02-08',
     startDate: '',
-    name: 'CSI 5510 Project 1',
+    name: 'Travel Website',
     tagline: 'Basic HTML/CSS/JS project for CSI 4510: Advanced Web Design.',
     images: [],
     status: 'archived',
@@ -174,16 +174,19 @@ export const ACADEMIC_PROJECTS: Project[] = [
     type: 'academic',
     date: '2026-03-01',
     startDate: '',
-    name: 'CSI 5510 Project 2',
+    name: 'Movie Database Query Tool',
     tagline: 'Basic API integration project for CSI 4510: Advanced Web Design.',
-    images: [],
+    images: ['movie-database-query-tool.png'],
     status: 'archived',
     description: (
-      <p>
-        Introduction to JavaScript and implementing APIs. The project takes a user search and
-        queries the Open Movie Database and renders the results. Using localStorage, the user is
-        able to manage favorites.
-      </p>
+      <>
+        <p>
+          Introduction to JavaScript and implementing APIs. The project takes a user search and
+          queries the Open Movie Database and renders the results. Using localStorage, the user is
+          able to manage favorites.
+        </p>
+        <p>Developed in under two hours.</p>
+      </>
     ),
     technologies: ['HTML', 'CSS', 'JS', 'RESTful API'],
     links: {},
@@ -193,15 +196,18 @@ export const ACADEMIC_PROJECTS: Project[] = [
     type: 'academic',
     date: '2026-03-28',
     startDate: '',
-    name: 'CSI 5510 Project 3',
+    name: 'Dog Breed Lookup Tool',
     tagline: 'Backend introduction project for CSI 4510: Advanced Web Design.',
     images: [],
     status: 'archived',
     description: (
-      <p>
-        Introduction to using backend services. Developed an API endpoint using PHP to fetch,
-        normalize, aggregate, and return data from multiple APIs.
-      </p>
+      <>
+        <p>
+          Introduction to using backend services. Developed an API endpoint using PHP to fetch,
+          normalize, aggregate, and return data from multiple APIs.
+        </p>
+        <p>Developed in roughly 90 minutes.</p>
+      </>
     ),
     technologies: ['HTML', 'CSS', 'JS', 'PHP', 'RESTful API'],
     links: {},
@@ -211,9 +217,9 @@ export const ACADEMIC_PROJECTS: Project[] = [
     type: 'academic',
     date: '2026-04-29',
     startDate: '2026-04-08',
-    name: 'CSI 5510 Project 4',
+    name: 'QuotDB',
     tagline: 'Final project for CSI 4510: Advanced Web Design.',
-    images: [],
+    images: ['quotdb.png'],
     status: 'archived',
     description: (
       <>
@@ -222,12 +228,26 @@ export const ACADEMIC_PROJECTS: Project[] = [
           of technologies allowed.
         </p>
         <p>
-          I developed a full-stack web application to track and manage quotes. Quotes can be
-          attributed to a source and author.
+          I developed a full-stack web application with Next.js to track and manage quotes. Quotes
+          can be attributed to a source and author. While I could have used Next.js&apos;s API
+          routes, to fulfill the requirement outlined by the assignment, I created endpoints using
+          NestJS.
+        </p>
+        <p>
+          The only formal requirement was to include the use of a third-party API. For this, I
+          included a &quot;Fetch a random quote&quot; button.
         </p>
       </>
     ),
-    technologies: ['TypeScript', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Prisma', 'shadcn'],
+    technologies: [
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'NestJS',
+      'MongoDB',
+      'Prisma',
+      'shadcn'
+    ],
     links: {},
     featured: false
   },
@@ -267,8 +287,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     description: (
       <>
         <p>
-          Finance tracking, budgeting, and visualization tool built with Java. Ran as a desktop
-          application using IFrame, stores data locally using SQL.
+          In a group of six, built a finance tracking, budgeting, and visualization tool with Java.
+          Ran as a desktop application using IFrame, stores data locally using SQL.
         </p>
       </>
     ),
