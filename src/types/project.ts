@@ -47,4 +47,5 @@ export interface Project {
   technologies: string[];
   links: ProjectLinks;
   featured: boolean;
+  defaultHidden: boolean;
 }

@@ -49,7 +49,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/tck-gg/tck'
     },
-    featured: true
+    featured: true,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -67,7 +68,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     ),
     technologies: ['Java', 'ForgeGradle'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -90,7 +92,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/butterfly-pit/fireballwand'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -103,7 +106,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     description: <p>Custom weapon addition utilizing custom model data for Minecraft 1.20.1.</p>,
     technologies: ['Java', 'Spigot API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -124,7 +128,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     ),
     technologies: ['Java', 'Spigot API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -142,7 +147,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     ),
     technologies: ['Java', 'Spigot API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -160,7 +166,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     ),
     technologies: ['Java', 'Spigot API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
 
   {
@@ -182,7 +189,8 @@ export const FREELANCE_PROJECTS: Project[] = [
     ),
     technologies: ['Java', 'Spigot API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'freelance',
@@ -200,6 +208,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     ),
     technologies: ['Java', 'Spigot API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   }
 ];

@@ -34,7 +34,7 @@ function ProjectSectionItem({ item }: { item: Project }) {
         }}
       />
       <div
-        className='py-2 group border-b border-stone-900 transition-colors duration-200 cursor-pointer'
+        className={`py-2 group border-b border-stone-900 transition-colors duration-200 cursor-pointer ${item.defaultHidden ? 'opacity-50' : ''}`}
         onMouseEnter={() => {
           setHovered(true);
         }}

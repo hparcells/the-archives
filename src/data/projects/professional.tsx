@@ -50,7 +50,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
       'Framer Motion'
     ],
     links: {},
-    featured: true
+    featured: true,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -74,7 +75,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
       'Jest'
     ],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -92,7 +94,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     ),
     technologies: ['JavaScript', 'Node.js', 'Microsoft SQL Server'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -110,7 +113,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     ),
     technologies: ['TypeScript', 'Node.js', 'Express', 'bcrypt'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -136,7 +140,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
       'Recharts'
     ],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -170,7 +175,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
       'Recharts'
     ],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -196,7 +202,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     ),
     technologies: ['Python', 'TensorFlow'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
 
   {
@@ -237,7 +244,8 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     ),
     technologies: ['Ignition Perspective', 'Microsoft SQL Server', 'Jython', 'JavaScript'],
     links: {},
-    featured: true
+    featured: true,
+    defaultHidden: false
   },
   {
     type: 'professional',
@@ -275,6 +283,7 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     ),
     technologies: ['Ignition Perspective', 'Microsoft SQL Server', 'Jython', 'JavaScript'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   }
 ];

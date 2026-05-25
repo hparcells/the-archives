@@ -20,7 +20,8 @@ export const OPEN_SOURCE_PROJECTS: Project[] = [
       github: 'https://github.com/Yamgirly/discord-donuts-archive',
       pullRequest: 'https://github.com/Yamgirly/discord-donuts-archive/pull/1'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'open-source',
@@ -41,7 +42,8 @@ export const OPEN_SOURCE_PROJECTS: Project[] = [
       github: 'https://github.com/SuperVK/RLBotJS',
       pullRequest: 'https://github.com/SuperVK/RLBotJS/pull/15'
     },
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'open-source',
@@ -70,6 +72,7 @@ export const OPEN_SOURCE_PROJECTS: Project[] = [
       github: 'https://github.com/nekiak/osu-metronome',
       pullRequest: 'https://github.com/nekiak/osu-metronome/pull/1'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   }
 ];

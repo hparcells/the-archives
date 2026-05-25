@@ -5,7 +5,7 @@ export const ACADEMIC_PROJECTS: Project[] = [
     type: 'academic',
     date: '2023-04-17',
     startDate: '2023-01-17',
-    name: 'CSI 2310: Data Structures Coursework',
+    name: 'CSI 2310 Code Runner',
     tagline: 'Overengineered coursework for CSI 2310: Data Structures.',
     images: ['csi-2310.png'],
     status: 'archived',
@@ -23,7 +23,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/hparcells/csi-2310'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'academic',
@@ -43,7 +44,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/hparcells/csi-3150/tree/master'
     },
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'academic',
@@ -72,7 +74,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     ),
     technologies: ['HTML', 'CSS', 'JavaScript', 'RESTful API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'academic',
@@ -98,7 +101,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/hparcells/csi-3480-password-manager'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'academic',
@@ -123,7 +127,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     ),
     technologies: ['HTML', 'CSS', 'JavaScript'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'academic',
@@ -150,7 +155,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/hparcells/csi-4999-project'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'academic',
@@ -168,7 +174,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     ),
     technologies: ['HTML', 'CSS'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'academic',
@@ -190,7 +197,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     ),
     technologies: ['HTML', 'CSS', 'JS', 'RESTful API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'academic',
@@ -211,7 +219,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     ),
     technologies: ['HTML', 'CSS', 'JS', 'PHP', 'RESTful API'],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: true
   },
   {
     type: 'academic',
@@ -249,7 +258,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
       'shadcn'
     ],
     links: {},
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'academic',
@@ -274,7 +284,8 @@ export const ACADEMIC_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/hparcells/parallel-image-processing-pipeline'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   },
   {
     type: 'academic',
@@ -296,6 +307,7 @@ export const ACADEMIC_PROJECTS: Project[] = [
     links: {
       github: 'https://github.com/hparcells/smartcash'
     },
-    featured: false
+    featured: false,
+    defaultHidden: false
   }
 ];
