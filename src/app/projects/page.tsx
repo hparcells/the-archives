@@ -45,6 +45,7 @@ function Projects() {
         filter={filter}
         filterValue='all'
         items={PROJECTS.filter((p) => p.featured).sort((a, b) => b.date.localeCompare(a.date))}
+        initialLimit={5}
       />
       <ProjectSection
         title='Professional'
@@ -53,6 +54,7 @@ function Projects() {
         items={PROJECTS.filter((p) => p.type === 'professional').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
+        initialLimit={5}
       />
       <ProjectSection
         title='Personal'
@@ -61,6 +63,7 @@ function Projects() {
         items={PROJECTS.filter((p) => p.type === 'personal').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
+        initialLimit={5}
       />
       <ProjectSection
         title='Open Source'
@@ -69,6 +72,7 @@ function Projects() {
         items={PROJECTS.filter((p) => p.type === 'open-source').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
+        initialLimit={5}
       />
       <ProjectSection
         title='Academic'
@@ -77,6 +81,7 @@ function Projects() {
         items={PROJECTS.filter((p) => p.type === 'academic').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
+        initialLimit={5}
       />
       <ProjectSection
         title='Freelance'
@@ -85,6 +90,7 @@ function Projects() {
         items={PROJECTS.filter((p) => p.type === 'freelance').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
+        initialLimit={5}
       />
     </PageLayout>
   );
