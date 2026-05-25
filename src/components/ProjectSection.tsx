@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
-import { Project } from '@/types/project';
 import ProjectSectionItem from '@/components/ProjectSectionItem';
 import SectionHeader from '@/components/SectionHeader';
+
+import { Project } from '@/types/project';
 
 const SHOW_MORE_INCREMENT = 10;
 
@@ -35,12 +37,18 @@ function ProjectSection({ title, filter, filterValue, items, initialLimit }: Pro
   return (
     <section>
       <SectionHeader title={title} />
-      {visible.map((item) => (
-        <ProjectSectionItem
-          item={item}
-          key={item.name}
-        />
-      ))}
+      <AnimatePresence initial={false}>
+        {visible.map((item) => (
+          <motion.div
+            key={item.name}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+          >
+            <ProjectSectionItem item={item} />
+          </motion.div>
+        ))}
+      </AnimatePresence>
       {items.length === 0 && <p className='mt-2'>No data found.</p>}
       {hasMore && (
         <div
