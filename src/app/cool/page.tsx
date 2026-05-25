@@ -29,6 +29,7 @@ function Cool() {
           <li>Denis</li>
           <li>&quot;Tibb&quot;</li>
           <li>Chaz</li>
+          <li>Nick</li>
           <li>Chloé</li>
           <li>Holly</li>
         </ul>

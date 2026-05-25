@@ -62,13 +62,12 @@ function Tools() {
       <section className='stack-4'>
         <h2>Automation</h2>
         <p>
-          I also utilize a suite of AutoHotkey scripts, which can be found in my GitHub repository
-          at{' '}
+          I also utilize a suite of AutoHotkey scripts, which can be found in my{' '}
           <a
             href='https://github.com/hparcells/ahk-scripts'
             target='_blank'
           >
-            https://github.com/hparcells/ahk-scripts
+            AutoHotkey GitHub repository
           </a>
           . These scripts automate various tasks as well as filling in the gaps of various software,
           improving my efficiency and productivity.

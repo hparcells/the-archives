@@ -103,7 +103,7 @@ function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
           onClick={onClose}
         >
           <motion.div
-            className='relative bg-stone-950 border border-stone-800 w-full max-w-2xl max-h-[80vh] overflow-y-auto mx-4 rounded-md'
+            className='relative bg-mist-950 border border-stone-800 w-full max-w-2xl max-h-[80vh] overflow-y-auto mx-4 rounded-md'
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 24 }}
@@ -118,7 +118,7 @@ function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
             >
               <X size={16} />
             </button>
-            <section className='sticky top-0 z-1 bg-stone-950 border-b border-stone-800 px-6 pt-6 pb-4 flex flex-col'>
+            <section className='sticky top-0 z-1 bg-mist-950 border-b border-stone-800 px-6 pt-6 pb-4 flex flex-col'>
               <p className='font-(family-name:--font-b612-mono) text-2xs text-yellow-500'>
                 {PROJECT_TYPE_LABELS[item.type]} {'//'} {dateToUse.substring(0, 4)}
               </p>

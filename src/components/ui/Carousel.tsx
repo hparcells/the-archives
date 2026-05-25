@@ -38,14 +38,14 @@ function Carousel({ images }: CarouselProps) {
           <IconButton
             icon={ChevronLeft}
             onClick={prev}
-            className='absolute left-2 top-1/2 -translate-y-1/2 z-10'
+            className='bg-mist-950/75 absolute left-2 top-1/2 -translate-y-1/2 z-1'
           />
           <IconButton
             icon={ChevronRight}
             onClick={next}
-            className='absolute right-2 top-1/2 -translate-y-1/2 z-10'
+            className='bg-mist-950/75 absolute right-2 top-1/2 -translate-y-1/2 z-1'
           />
-          <div className='absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1.5'>
+          <div className='absolute bottom-3 left-1/2 z-1 flex -translate-x-1/2 items-center gap-1.5 bg-mist-950/75 p-1 rounded-xl'>
             {images.map((_, i) => (
               <button
                 key={i}
