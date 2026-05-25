@@ -237,7 +237,7 @@ export const PROFESSIONAL_PROJECTS: Project[] = [
     ),
     technologies: ['Ignition Perspective', 'Microsoft SQL Server', 'Jython', 'JavaScript'],
     links: {},
-    featured: false
+    featured: true
   },
   {
     type: 'professional',

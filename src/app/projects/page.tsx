@@ -32,9 +32,9 @@ function Projects() {
           { label: 'All', value: 'all' },
           { label: 'Professional', value: 'professional' },
           { label: 'Personal', value: 'personal' },
-          { label: 'Freelance', value: 'freelance' },
+          { label: 'Open Source', value: 'open-source' },
           { label: 'Academic', value: 'academic' },
-          { label: 'Open Source', value: 'open-source' }
+          { label: 'Freelance', value: 'freelance' }
         ]}
         value={filter}
         onChange={setFilter}
@@ -63,10 +63,10 @@ function Projects() {
         )}
       />
       <ProjectSection
-        title='Freelance'
+        title='Open Source'
         filter={filter}
-        filterValue='freelance'
-        items={PROJECTS.filter((p) => p.type === 'freelance').sort((a, b) =>
+        filterValue='open-source'
+        items={PROJECTS.filter((p) => p.type === 'open-source').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
       />
@@ -79,10 +79,10 @@ function Projects() {
         )}
       />
       <ProjectSection
-        title='Open Source'
+        title='Freelance'
         filter={filter}
-        filterValue='open-source'
-        items={PROJECTS.filter((p) => p.type === 'open-source').sort((a, b) =>
+        filterValue='freelance'
+        items={PROJECTS.filter((p) => p.type === 'freelance').sort((a, b) =>
           b.date.localeCompare(a.date)
         )}
       />
