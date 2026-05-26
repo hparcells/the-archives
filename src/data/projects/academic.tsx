@@ -309,5 +309,27 @@ export const ACADEMIC_PROJECTS: Project[] = [
     },
     featured: false,
     defaultHidden: false
+  },
+  {
+    type: 'academic',
+    date: '2025-04-13',
+    startDate: '2025-02-07',
+    name: 'AthleticDB',
+    tagline:
+      'Athletic events, athlete stats, and team tracker. Final group project for CSI 3450: Database Design and Implementation.',
+    images: [],
+    status: 'complete',
+    description: (
+      <>
+        <p>In a group of four, developed a full-stack web application inspired by Athletic.net.</p>
+        <p>Implemented pages for athletes, meets, schools, and teams.</p>
+      </>
+    ),
+    technologies: ['TypeScript', 'Next.js', 'Tailwind CSS', 'Python', 'Flask', 'PostgreSQL'],
+    links: {
+      github: 'https://github.com/hparcells/athleticdb'
+    },
+    featured: false,
+    defaultHidden: false
   }
 ];
