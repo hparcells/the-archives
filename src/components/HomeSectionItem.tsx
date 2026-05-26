@@ -23,7 +23,7 @@ function HomeSectionItem({
       className={`flex items-center justify-between py-3 border-b border-stone-900 ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'group'}`}
     >
       <div className='flex items-center gap-4 min-w-0'>
-        <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
+        <p className='mono text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
           {number}
         </p>
         <p className='text-stone-200 group-hover:text-yellow-500 transition-colors duration-200 truncate'>

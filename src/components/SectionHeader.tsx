@@ -12,14 +12,14 @@ function SectionHeader({
   return (
     <div className='flex justify-between border-b border-stone-800 pb-2'>
       <p
-        className={`font-(family-name:--font-b612-mono) text-stone-600 text-xs }`}
+        className={`mono text-stone-600 text-xs }`}
         onClick={onLeftTextClick}
       >
         {leftText}
       </p>
       {rightText && (
         <p
-          className={`font-(family-name:--font-b612-mono) text-stone-600 text-xs ${onRightTextClick ? 'cursor-pointer hover:text-stone-400 transition-colors duration-200' : ''}`}
+          className={`mono text-stone-600 text-xs ${onRightTextClick ? 'cursor-pointer hover:text-stone-400 transition-colors duration-200' : ''}`}
           onClick={onRightTextClick}
         >
           {rightText}

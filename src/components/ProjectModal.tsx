@@ -133,8 +133,8 @@ function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
             >
               <X size={16} />
             </button>
-            <section className='sticky top-0 z-1 bg-mist-950 border-b border-stone-800 px-6 pt-6 pb-4 flex flex-col'>
-              <p className='font-(family-name:--font-b612-mono) text-2xs text-yellow-500'>
+            <section className='sticky top-0 z-1 bg-mist-950 border-b border-stone-800 px-6 pt-6 pb-4 stack'>
+              <p className='mono text-2xs text-yellow-500'>
                 {PROJECT_TYPE_LABELS[item.type]} {'//'} {dateToUse.substring(0, 4)}
               </p>
               <p className='font-semibold text-lg text-stone-200'>{item.name}</p>
@@ -151,22 +151,16 @@ function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
                 <div className='grid grid-cols-2 gap-4'>
                   {item.startDate && item.date !== item.startDate && (
                     <div>
-                      <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
-                        Start Date
-                      </p>
+                      <p className='mono text-xs text-stone-600'>Start Date</p>
                       <p className='text-sm'>{item.startDate}</p>
                     </div>
                   )}
                   <div>
-                    <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
-                      Date
-                    </p>
+                    <p className='mono text-xs text-stone-600'>Date</p>
                     <p className='text-sm'>{item.date}</p>
                   </div>
                   <div>
-                    <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600'>
-                      Status
-                    </p>
+                    <p className='mono text-xs text-stone-600'>Status</p>
                     <p className='text-sm'>{PROJECT_STATUS_LABELS[item.status]}</p>
                   </div>
                 </div>

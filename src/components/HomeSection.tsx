@@ -4,7 +4,7 @@ function HomeSection({ title, children }: { title: string; children?: React.Reac
   return (
     <section>
       <SectionHeader leftText={title} />
-      <div className='flex flex-col'>{children}</div>
+      <div className='stack'>{children}</div>
     </section>
   );
 }

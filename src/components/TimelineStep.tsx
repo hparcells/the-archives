@@ -13,7 +13,7 @@ function TimelineStep({
 }) {
   return (
     <>
-      <p className='pr-4 pt-2 text-right self-start leading-none text-sm font-(family-name:--font-b612-mono) text-stone-600'>
+      <p className='pr-4 pt-2 text-right self-start leading-none text-sm mono text-stone-600'>
         {date}
       </p>
       <div className={`relative pl-4 ${!isLast ? 'pb-6' : ''}`}>

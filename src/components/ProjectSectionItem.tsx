@@ -44,10 +44,10 @@ function ProjectSectionItem({ item }: { item: Project }) {
         onClick={handleItemClick}
       >
         <div className='flex items-center gap-4'>
-          <p className='font-(family-name:--font-b612-mono) text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
+          <p className='mono text-xs text-stone-600 group-hover:text-yellow-500 transition-colors duration-200'>
             {dateToUse.substring(0, 4)}
           </p>
-          <div className='flex flex-col grow min-w-0'>
+          <div className='stack grow min-w-0'>
             <p className='group-hover:text-yellow-500 transition-colors duration-200 truncate group-hover:whitespace-normal'>
               {item.name}
             </p>
@@ -59,7 +59,7 @@ function ProjectSectionItem({ item }: { item: Project }) {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.2, ease: 'easeInOut' }}
                   style={{ overflow: 'hidden' }}
-                  className='flex flex-col gap-2'
+                  className='stack-2'
                 >
                   <p className='text-sm'>{item.tagline}</p>
                   {item.technologies.length > 0 && (

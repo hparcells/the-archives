@@ -43,7 +43,7 @@ function Checkbox({ label, checked, onChange }: CheckboxProps) {
         </div>
       </div>
       <span
-        className={`font-(family-name:--font-b612-mono) text-xs transition-colors duration-200 ${
+        className={`mono text-xs transition-colors duration-200 ${
           checked ? 'text-yellow-500' : 'text-stone-600 group-hover:text-stone-400'
         }`}
       >

@@ -28,7 +28,7 @@ function PageLayout({
           </div>
         )}
       </section>
-      <div className='flex flex-col gap-12'>{children}</div>
+      <div className='stack-12'>{children}</div>
     </>
   );
 }

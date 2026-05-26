@@ -25,7 +25,7 @@ function Chip({ type, label, className }: ChipProps) {
 
   return (
     <p
-      className={`font-(family-name:--font-b612-mono) text-2xs px-2 py-0.5 rounded-sm border transition-all duration-200 ${resolvedClassName}`}
+      className={`mono text-2xs px-2 py-0.5 rounded-sm border transition-all duration-200 ${resolvedClassName}`}
     >
       {resolvedLabel}
     </p>
