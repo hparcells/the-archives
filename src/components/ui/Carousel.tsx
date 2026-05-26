@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import IconButton from './IconButton';
+import CarouselButton from './CarouselButton';
 
 interface CarouselProps {
   images: string[];
@@ -35,12 +35,12 @@ function Carousel({ images }: CarouselProps) {
       ))}
       {images.length > 1 && (
         <>
-          <IconButton
+          <CarouselButton
             icon={ChevronLeft}
             onClick={prev}
             className='bg-mist-950/75 absolute left-2 top-1/2 -translate-y-1/2 z-1'
           />
-          <IconButton
+          <CarouselButton
             icon={ChevronRight}
             onClick={next}
             className='bg-mist-950/75 absolute right-2 top-1/2 -translate-y-1/2 z-1'

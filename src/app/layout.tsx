@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
-import { B612_Mono, Major_Mono_Display, Space_Grotesk } from 'next/font/google';
+import { B612_Mono, Major_Mono_Display, Space_Grotesk, Geist } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+
+import { cn } from '@/util/shadcn';
 
 import '@/styles/root.css';
 
@@ -38,7 +40,13 @@ function RootLayout({
   return (
     <html
       lang='en'
-      className={`${majorMonoDisplay.variable} ${spaceGrotesk.className} ${b612Mono.variable} bg-mist-950 text-stone-400`}
+      className={cn(
+        'bg-mist-950',
+        'text-stone-400',
+        majorMonoDisplay.variable,
+        spaceGrotesk.className,
+        b612Mono.variable
+      )}
     >
       <body className='antialiased'>
         <main className='pt-8 sm:pt-16 px-4 pb-8 max-w-4xl w-full m-auto'>{children}</main>

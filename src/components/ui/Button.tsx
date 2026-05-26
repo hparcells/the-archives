@@ -1,64 +1,52 @@
-'use client';
+import * as React from 'react';
+import { cva, type VariantProps } from 'class-variance-authority';
+import { Slot } from 'radix-ui';
 
-import Link from 'next/link';
-import { LucideIcon } from 'lucide-react';
+import { cn } from '@/util/shadcn';
 
-type ButtonVariant = 'primary' | 'outline';
-
-const variantStyles: Record<ButtonVariant, string> = {
-  primary:
-    'bg-yellow-500 text-stone-950 hover:bg-yellow-400 hover:bg-yellow-500/80 hover:text-stone-950/80',
-  outline: 'text-stone-400 border border-stone-600 hover:text-stone-200 hover:border-stone-400'
-};
-
-const baseStyles =
-  'flex items-center gap-1.5 rounded-sm px-3 py-1.5 text-sm font-medium transition-colors duration-200 cursor-pointer';
-
-interface ButtonBase {
-  children: string;
-  variant?: ButtonVariant;
-  icon?: LucideIcon;
-  className?: string;
-}
-
-type AsButton = ButtonBase &
-  Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonBase> & { href?: never };
-type AsLink = ButtonBase & { href: string; target?: string; rel?: string };
-
-type ButtonProps = AsButton | AsLink;
-
-function Button({ children, variant = 'primary', icon: Icon, className, ...props }: ButtonProps) {
-  const classes = `${baseStyles} ${variantStyles[variant]} ${className ?? ''}`.trim();
-
-  const content = (
-    <>
-      {Icon && <Icon size={14} />}
-      {children}
-    </>
-  );
-
-  if (props.href) {
-    const { href, ...rest } = props as AsLink;
-    return (
-      <Link
-        href={href}
-        className={classes}
-        {...rest}
-      >
-        {content}
-      </Link>
-    );
+const buttonVariants = cva(
+  'inline-flex shrink-0 items-center justify-center gap-1.5 rounded-sm text-sm font-medium whitespace-nowrap outline-none transition-colors duration-200 cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*="size-"])]:size-3.5',
+  {
+    variants: {
+      variant: {
+        primary: 'bg-yellow-500 text-stone-950 hover:bg-yellow-500/80 hover:text-stone-950/80',
+        outline:
+          'text-stone-400 border border-stone-600 hover:text-stone-200 hover:border-stone-400',
+        ghost: 'text-stone-600 hover:text-stone-200 hover:bg-stone-900/30'
+      },
+      size: {
+        default: 'px-3 py-1.5',
+        sm: 'px-2.5 py-1 text-xs',
+        lg: 'px-4 py-2',
+        icon: 'size-8'
+      }
+    },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'default'
+    }
   }
+);
 
-  const { ...rest } = props;
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: React.ComponentProps<'button'> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  }) {
+  const Comp = asChild ? Slot.Root : 'button';
+
   return (
-    <button
-      className={classes}
-      {...rest}
-    >
-      {content}
-    </button>
+    <Comp
+      data-slot='button'
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
   );
 }
 
-export default Button;
+export { Button, buttonVariants };

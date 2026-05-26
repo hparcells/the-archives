@@ -1,14 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import { SearchIcon } from 'lucide-react';
 
 import Alert from '@/components/ui/Alert';
 import Checkbox from '@/components/ui/Checkbox';
 import PageLayout from '@/components/PageLayout';
 import ProjectSection from '@/components/ProjectSection';
 import SegmentedControl from '@/components/ui/SegmentedControl';
+import { Input } from '@/components/ui/Input';
+import { InputGroup, InputGroupAddon, InputGroupInput } from '@/components/ui/InputGroup';
 
 import { PROJECTS } from '@/data/projects';
+import { Button } from '@/components/ui/Button';
 
 function Projects() {
   const [filter, setFilter] = useState<string>('all');
@@ -39,6 +43,12 @@ function Projects() {
       }
     >
       <section className='stack-4'>
+        {/* <InputGroup>
+          <InputGroupInput placeholder='Search projects...' />
+          <InputGroupAddon align='inline-start'>
+            <SearchIcon />
+          </InputGroupAddon>
+        </InputGroup> */}
         <SegmentedControl
           data={[
             { label: 'All', value: 'all' },

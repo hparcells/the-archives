@@ -4,10 +4,11 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X, CodeXml, ExternalLink, GitPullRequest, AlertCircle, PencilLine } from 'lucide-react';
+import Link from 'next/link';
 
 import SectionHeader from './SectionHeader';
 import ProjectTechStackList from './ProjectTechStackList';
-import Button from './ui/Button';
+import { Button } from './ui/Button';
 import Carousel from './ui/Carousel';
 
 import { Project, PROJECT_STATUS_LABELS, PROJECT_TYPE_LABELS } from '@/types/project';
@@ -19,50 +20,64 @@ function ProjectModalLinks({ links }: { links: Project['links'] }) {
       <SectionHeader leftText='Links' />
       <div className='flex gap-2'>
         {links.github && (
-          <Button
-            icon={CodeXml}
-            href={links.github}
-            target='_blank'
-          >
-            GitHub
+          <Button asChild>
+            <Link
+              href={links.github}
+              target='_blank'
+            >
+              <CodeXml />
+              GitHub
+            </Link>
           </Button>
         )}
         {links.issue && (
-          <Button
-            icon={AlertCircle}
-            href={links.issue}
-            target='_blank'
-          >
-            Issue
+          <Button asChild>
+            <Link
+              href={links.issue}
+              target='_blank'
+            >
+              <AlertCircle />
+              Issue
+            </Link>
           </Button>
         )}
         {links.pullRequest && (
-          <Button
-            icon={GitPullRequest}
-            href={links.pullRequest}
-            target='_blank'
-          >
-            Pull Request
+          <Button asChild>
+            <Link
+              href={links.pullRequest}
+              target='_blank'
+            >
+              <GitPullRequest />
+              Pull Request
+            </Link>
           </Button>
         )}
         {links.live && (
           <Button
-            icon={ExternalLink}
+            asChild
             variant='outline'
-            href={links.live}
-            target='_blank'
           >
-            Live Site
+            <Link
+              href={links.live}
+              target='_blank'
+            >
+              <ExternalLink />
+              Live Site
+            </Link>
           </Button>
         )}
         {links.blog && (
           <Button
-            icon={PencilLine}
+            asChild
             variant='outline'
-            href={links.blog}
-            target='_blank'
           >
-            Blog Post
+            <Link
+              href={links.blog}
+              target='_blank'
+            >
+              <PencilLine />
+              Blog Post
+            </Link>
           </Button>
         )}
       </div>
