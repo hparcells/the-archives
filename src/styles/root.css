@@ -8,11 +8,6 @@
   --text-2xs: 0.625rem;
 }
 
-html, body {
-  height: 100%;
-  scrollbar-gutter: stable;
-}
-
 @utility mono {
   font-family: var(--font-b612-mono);
 }
@@ -26,6 +21,10 @@ html, body {
 }
 
 @layer base {
+  html, body {
+    height: 100%;
+    scrollbar-gutter: stable;
+  }
   p {
     @apply font-light;
   }

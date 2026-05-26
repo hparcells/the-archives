@@ -14,7 +14,7 @@ interface ProjectSectionProps {
   title: string;
   selectedGroup: string;
   groupValue: string;
-  items: Project[];
+  projects: Project[];
   initialLimit: number;
   hiddenCount?: number;
   showHidden?: () => void;
@@ -24,7 +24,7 @@ function ProjectSection({
   title,
   selectedGroup,
   groupValue,
-  items,
+  projects,
   initialLimit,
   hiddenCount,
   showHidden
@@ -35,7 +35,7 @@ function ProjectSection({
     return null;
   }
 
-  const sorted = items.sort((a, b) => {
+  const sorted = [...projects].sort((a, b) => {
     const dateAToUse = a.startDate || a.date;
     const dateBToUse = b.startDate || b.date;
     return new Date(dateBToUse).getTime() - new Date(dateAToUse).getTime();
@@ -45,7 +45,7 @@ function ProjectSection({
   const hasMore = visibleCount < sorted.length;
 
   return (
-    <section>
+    <div>
       <SectionHeader
         leftText={title}
         rightText={hiddenCount ? `${hiddenCount} hidden` : ''}
@@ -64,7 +64,7 @@ function ProjectSection({
           </motion.div>
         ))}
       </AnimatePresence>
-      {items.length === 0 && <p className='mt-2'>No data found.</p>}
+      {projects.length === 0 && <p className='mt-2'>No data found.</p>}
       {hasMore && (
         <div
           className='py-2 border-b border-stone-900 text-center cursor-pointer hover:bg-stone-900/30 transition-colors duration-200'
@@ -77,7 +77,7 @@ function ProjectSection({
           <p className='text-sm text-stone-600'>+{sorted.length - visibleCount} more</p>
         </div>
       )}
-    </section>
+    </div>
   );
 }
 
