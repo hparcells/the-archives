@@ -20,9 +20,8 @@ html, body {
 @utility stack {
   @apply flex flex-col;
 }
-
 @utility stack-* {
-  @apply col;
+  @apply flex flex-col;
   gap: calc(--value(integer) * var(--spacing));
 }
 
