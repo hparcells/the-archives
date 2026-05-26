@@ -16,6 +16,13 @@ function Projects() {
 
   const visibleProjects = PROJECTS.filter((p) => showHidden || !p.defaultHidden);
 
+  function hiddenCount(predicate: (p: (typeof PROJECTS)[0]) => boolean) {
+    if (showHidden) {
+      return 0;
+    }
+    return PROJECTS.filter((p) => predicate(p) && p.defaultHidden).length;
+  }
+
   return (
     <PageLayout
       title='Projects'
@@ -59,6 +66,10 @@ function Projects() {
           .filter((p) => p.featured)
           .sort((a, b) => b.date.localeCompare(a.date))}
         initialLimit={5}
+        hiddenCount={hiddenCount((p) => p.featured)}
+        showHidden={() => {
+          setShowHidden(true);
+        }}
       />
       <ProjectSection
         title='Professional'
@@ -68,6 +79,10 @@ function Projects() {
           .filter((p) => p.type === 'professional')
           .sort((a, b) => b.date.localeCompare(a.date))}
         initialLimit={5}
+        hiddenCount={hiddenCount((p) => p.type === 'professional')}
+        showHidden={() => {
+          setShowHidden(true);
+        }}
       />
       <ProjectSection
         title='Personal'
@@ -77,6 +92,10 @@ function Projects() {
           .filter((p) => p.type === 'personal')
           .sort((a, b) => b.date.localeCompare(a.date))}
         initialLimit={5}
+        hiddenCount={hiddenCount((p) => p.type === 'personal')}
+        showHidden={() => {
+          setShowHidden(true);
+        }}
       />
       <ProjectSection
         title='Open Source'
@@ -86,6 +105,10 @@ function Projects() {
           .filter((p) => p.type === 'open-source')
           .sort((a, b) => b.date.localeCompare(a.date))}
         initialLimit={5}
+        hiddenCount={hiddenCount((p) => p.type === 'open-source')}
+        showHidden={() => {
+          setShowHidden(true);
+        }}
       />
       <ProjectSection
         title='Academic'
@@ -95,6 +118,10 @@ function Projects() {
           .filter((p) => p.type === 'academic')
           .sort((a, b) => b.date.localeCompare(a.date))}
         initialLimit={5}
+        hiddenCount={hiddenCount((p) => p.type === 'academic')}
+        showHidden={() => {
+          setShowHidden(true);
+        }}
       />
       <ProjectSection
         title='Freelance'
@@ -104,6 +131,10 @@ function Projects() {
           .filter((p) => p.type === 'freelance')
           .sort((a, b) => b.date.localeCompare(a.date))}
         initialLimit={5}
+        hiddenCount={hiddenCount((p) => p.type === 'freelance')}
+        showHidden={() => {
+          setShowHidden(true);
+        }}
       />
     </PageLayout>
   );

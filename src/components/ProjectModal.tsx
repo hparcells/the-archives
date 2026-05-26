@@ -16,7 +16,7 @@ function ProjectModalLinks({ links }: { links: Project['links'] }) {
   if (Object.keys(links).length === 0) return null;
   return (
     <section className='stack-2'>
-      <SectionHeader title='Links' />
+      <SectionHeader leftText='Links' />
       <div className='flex gap-2'>
         {links.github && (
           <Button
@@ -132,7 +132,7 @@ function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
                 </section>
               )}
               <section className='stack-2'>
-                <SectionHeader title='Details' />
+                <SectionHeader leftText='Details' />
                 <div className='grid grid-cols-2 gap-4'>
                   {item.startDate && item.date !== item.startDate && (
                     <div>
@@ -157,12 +157,12 @@ function ProjectModal({ item, isOpen, onClose }: ProjectModalProps) {
                 </div>
               </section>
               <section className='stack-2'>
-                <SectionHeader title='About' />
+                <SectionHeader leftText='About' />
                 {item.description}
               </section>
               {item.technologies.length > 0 && (
                 <section className='stack-2'>
-                  <SectionHeader title='Tech Stack' />
+                  <SectionHeader leftText='Tech Stack' />
                   <ProjectTechStackList technologies={item.technologies} />
                 </section>
               )}

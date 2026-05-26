@@ -3,7 +3,7 @@ import SectionHeader from './SectionHeader';
 function HomeSection({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
     <section>
-      <SectionHeader title={title} />
+      <SectionHeader leftText={title} />
       <div className='flex flex-col'>{children}</div>
     </section>
   );

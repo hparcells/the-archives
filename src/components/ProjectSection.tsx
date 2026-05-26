@@ -16,9 +16,19 @@ interface ProjectSectionProps {
   filterValue: string;
   items: Project[];
   initialLimit: number;
+  hiddenCount?: number;
+  showHidden?: () => void;
 }
 
-function ProjectSection({ title, filter, filterValue, items, initialLimit }: ProjectSectionProps) {
+function ProjectSection({
+  title,
+  filter,
+  filterValue,
+  items,
+  initialLimit,
+  hiddenCount,
+  showHidden
+}: ProjectSectionProps) {
   const [visibleCount, setVisibleCount] = useState(initialLimit);
 
   if (filter !== 'all' && filter !== filterValue) {
@@ -36,7 +46,11 @@ function ProjectSection({ title, filter, filterValue, items, initialLimit }: Pro
 
   return (
     <section>
-      <SectionHeader title={title} />
+      <SectionHeader
+        leftText={title}
+        rightText={hiddenCount ? `${hiddenCount} hidden` : ''}
+        onRightTextClick={showHidden}
+      />
       <AnimatePresence initial={false}>
         {visible.map((item) => (
           <motion.div
