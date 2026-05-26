@@ -7,6 +7,7 @@
     ".infisical.json": true,
     ".prettierrc": true,
     "cspell.json": true,
+    "cypress.config.ts": true,
     "eslint.config.mjs": true,
     "deploy.sh": true,
     "docker-compose.yml": true,
