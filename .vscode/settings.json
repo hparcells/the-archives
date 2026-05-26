@@ -1,6 +1,7 @@
 {
   "files.exclude": {
     ".claude": true,
+    ".husky": true,
     ".next": true,
     "node_modules": true,
     ".dockerignore": true,

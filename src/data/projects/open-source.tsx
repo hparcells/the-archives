@@ -6,7 +6,7 @@ export const OPEN_SOURCE_PROJECTS: Project[] = [
     date: '2018-10-03',
     startDate: '2018-10-03',
     name: 'Discord Donuts Deliver Command',
-    tagline: 'Added additional Discord bot functionality.',
+    tagline: 'Added core Discord bot functionality.',
     images: [],
     status: 'complete',
     description: (

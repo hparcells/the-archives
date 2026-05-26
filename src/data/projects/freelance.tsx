@@ -69,7 +69,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'ForgeGradle'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
   {
     type: 'freelance',
@@ -93,7 +93,7 @@ export const FREELANCE_PROJECTS: Project[] = [
       github: 'https://github.com/butterfly-pit/fireballwand'
     },
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
   {
     type: 'freelance',
@@ -107,7 +107,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'Spigot API'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
   {
     type: 'freelance',
@@ -129,7 +129,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'Spigot API'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
   {
     type: 'freelance',
@@ -148,7 +148,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'Spigot API'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
   {
     type: 'freelance',
@@ -167,7 +167,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'Spigot API'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
 
   {
@@ -190,7 +190,7 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'Spigot API'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   },
   {
     type: 'freelance',
@@ -209,6 +209,6 @@ export const FREELANCE_PROJECTS: Project[] = [
     technologies: ['Java', 'Spigot API'],
     links: {},
     featured: false,
-    defaultHidden: false
+    defaultHidden: true
   }
 ];
