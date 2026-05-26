@@ -14,7 +14,7 @@ function Checkbox({ label, checked, onChange }: CheckboxProps) {
   return (
     <label
       htmlFor={id}
-      className='flex items-center gap-2 cursor-pointer group'
+      className='flex items-center gap-2 cursor-pointer group w-fit'
     >
       <div className='relative flex items-center justify-center'>
         <input
