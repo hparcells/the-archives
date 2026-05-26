@@ -13,19 +13,49 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from '@/components/ui/In
 
 import { PROJECTS } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
+import { Project } from '@/types/project';
 
 function Projects() {
-  const [filter, setFilter] = useState<string>('all');
+  const [selectedGroup, setSelectedGroup] = useState<string>('all');
   const [showHidden, setShowHidden] = useState<boolean>(false);
 
   const visibleProjects = PROJECTS.filter((p) => showHidden || !p.defaultHidden);
 
-  function hiddenCount(predicate: (p: (typeof PROJECTS)[0]) => boolean) {
+  function hiddenCount(filter: (p: Project) => boolean) {
     if (showHidden) {
       return 0;
     }
-    return PROJECTS.filter((p) => predicate(p) && p.defaultHidden).length;
+    return PROJECTS.filter((p) => filter(p) && p.defaultHidden).length;
   }
+
+  const sections = [
+    { title: 'Featured', groupValue: 'all', filter: (p: Project) => p.featured },
+    {
+      title: 'Professional',
+      groupValue: 'professional',
+      filter: (p: Project) => p.type === 'professional'
+    },
+    {
+      title: 'Personal',
+      groupValue: 'personal',
+      filter: (p: Project) => p.type === 'personal'
+    },
+    {
+      title: 'Open Source',
+      groupValue: 'open-source',
+      filter: (p: Project) => p.type === 'open-source'
+    },
+    {
+      title: 'Academic',
+      groupValue: 'academic',
+      filter: (p: Project) => p.type === 'academic'
+    },
+    {
+      title: 'Freelance',
+      groupValue: 'freelance',
+      filter: (p: Project) => p.type === 'freelance'
+    }
+  ];
 
   return (
     <PageLayout
@@ -52,14 +82,15 @@ function Projects() {
         <SegmentedControl
           data={[
             { label: 'All', value: 'all' },
-            { label: 'Professional', value: 'professional' },
-            { label: 'Personal', value: 'personal' },
-            { label: 'Open Source', value: 'open-source' },
-            { label: 'Academic', value: 'academic' },
-            { label: 'Freelance', value: 'freelance' }
+            ...sections.slice(1).map(({ title, groupValue }) => {
+              return {
+                label: title,
+                value: groupValue
+              };
+            })
           ]}
-          value={filter}
-          onChange={setFilter}
+          value={selectedGroup}
+          onChange={setSelectedGroup}
         />
         <Checkbox
           label='Show hidden'
@@ -68,84 +99,20 @@ function Projects() {
         />
       </section>
 
-      <ProjectSection
-        title='Featured'
-        filter={filter}
-        filterValue='all'
-        items={visibleProjects
-          .filter((p) => p.featured)
-          .sort((a, b) => b.date.localeCompare(a.date))}
-        initialLimit={5}
-        hiddenCount={hiddenCount((p) => p.featured)}
-        showHidden={() => {
-          setShowHidden(true);
-        }}
-      />
-      <ProjectSection
-        title='Professional'
-        filter={filter}
-        filterValue='professional'
-        items={visibleProjects
-          .filter((p) => p.type === 'professional')
-          .sort((a, b) => b.date.localeCompare(a.date))}
-        initialLimit={5}
-        hiddenCount={hiddenCount((p) => p.type === 'professional')}
-        showHidden={() => {
-          setShowHidden(true);
-        }}
-      />
-      <ProjectSection
-        title='Personal'
-        filter={filter}
-        filterValue='personal'
-        items={visibleProjects
-          .filter((p) => p.type === 'personal')
-          .sort((a, b) => b.date.localeCompare(a.date))}
-        initialLimit={5}
-        hiddenCount={hiddenCount((p) => p.type === 'personal')}
-        showHidden={() => {
-          setShowHidden(true);
-        }}
-      />
-      <ProjectSection
-        title='Open Source'
-        filter={filter}
-        filterValue='open-source'
-        items={visibleProjects
-          .filter((p) => p.type === 'open-source')
-          .sort((a, b) => b.date.localeCompare(a.date))}
-        initialLimit={5}
-        hiddenCount={hiddenCount((p) => p.type === 'open-source')}
-        showHidden={() => {
-          setShowHidden(true);
-        }}
-      />
-      <ProjectSection
-        title='Academic'
-        filter={filter}
-        filterValue='academic'
-        items={visibleProjects
-          .filter((p) => p.type === 'academic')
-          .sort((a, b) => b.date.localeCompare(a.date))}
-        initialLimit={5}
-        hiddenCount={hiddenCount((p) => p.type === 'academic')}
-        showHidden={() => {
-          setShowHidden(true);
-        }}
-      />
-      <ProjectSection
-        title='Freelance'
-        filter={filter}
-        filterValue='freelance'
-        items={visibleProjects
-          .filter((p) => p.type === 'freelance')
-          .sort((a, b) => b.date.localeCompare(a.date))}
-        initialLimit={5}
-        hiddenCount={hiddenCount((p) => p.type === 'freelance')}
-        showHidden={() => {
-          setShowHidden(true);
-        }}
-      />
+      {sections.map(({ title, groupValue, filter }) => (
+        <ProjectSection
+          key={title}
+          title={title}
+          selectedGroup={selectedGroup}
+          groupValue={groupValue}
+          items={visibleProjects.filter(filter).sort((a, b) => b.date.localeCompare(a.date))}
+          initialLimit={5}
+          hiddenCount={hiddenCount(filter)}
+          showHidden={() => {
+            setShowHidden(true);
+          }}
+        />
+      ))}
     </PageLayout>
   );
 }

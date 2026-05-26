@@ -12,8 +12,8 @@ const SHOW_MORE_INCREMENT = 10;
 
 interface ProjectSectionProps {
   title: string;
-  filter: string;
-  filterValue: string;
+  selectedGroup: string;
+  groupValue: string;
   items: Project[];
   initialLimit: number;
   hiddenCount?: number;
@@ -22,8 +22,8 @@ interface ProjectSectionProps {
 
 function ProjectSection({
   title,
-  filter,
-  filterValue,
+  selectedGroup,
+  groupValue,
   items,
   initialLimit,
   hiddenCount,
@@ -31,7 +31,7 @@ function ProjectSection({
 }: ProjectSectionProps) {
   const [visibleCount, setVisibleCount] = useState(initialLimit);
 
-  if (filter !== 'all' && filter !== filterValue) {
+  if (selectedGroup !== 'all' && selectedGroup !== groupValue) {
     return null;
   }
 
