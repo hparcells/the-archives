@@ -27,7 +27,7 @@ export const PROJECT_TYPE_LABELS: Record<ProjectType, string> = {
   freelance: 'Freelance'
 };
 
-interface ProjectLinks {
+export interface ProjectLinks {
   github?: string;
   issue?: string;
   pullRequest?: string;

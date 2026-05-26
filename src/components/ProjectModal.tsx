@@ -6,79 +6,43 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { X, CodeXml, ExternalLink, GitPullRequest, AlertCircle, PencilLine } from 'lucide-react';
 import Link from 'next/link';
 
-import SectionHeader from './SectionHeader';
-import ProjectTechStackList from './ProjectTechStackList';
-import { Button } from './ui/Button';
-import Carousel from './ui/Carousel';
+import SectionHeader from '@/components/SectionHeader';
+import ProjectTechStackList from '@/components/ProjectTechStackList';
+import { Button } from '@/components/ui/Button';
+import Carousel from '@/components/ui/Carousel';
 
-import { Project, PROJECT_STATUS_LABELS, PROJECT_TYPE_LABELS } from '@/types/project';
+import { Project, PROJECT_STATUS_LABELS, PROJECT_TYPE_LABELS, ProjectLinks } from '@/types/project';
 
-function ProjectModalLinks({ links }: { links: Project['links'] }) {
+const LINK_CONFIG = [
+  { key: 'github', icon: CodeXml, label: 'GitHub', variant: 'primary' },
+  { key: 'issue', icon: AlertCircle, label: 'Issue', variant: 'primary' },
+  { key: 'pullRequest', icon: GitPullRequest, label: 'Pull Request', variant: 'primary' },
+  { key: 'live', icon: ExternalLink, label: 'Live Site', variant: 'outline' },
+  { key: 'blog', icon: PencilLine, label: 'Blog Post', variant: 'outline' }
+] as const;
+
+function ProjectModalLinks({ links }: { links: ProjectLinks }) {
   if (Object.keys(links).length === 0) return null;
   return (
     <section className='stack-2'>
       <SectionHeader leftText='Links' />
       <div className='flex gap-2'>
-        {links.github && (
-          <Button asChild>
-            <Link
-              href={links.github}
-              target='_blank'
+        {LINK_CONFIG.map(({ key, icon: Icon, label, variant }) =>
+          links[key] ? (
+            <Button
+              key={key}
+              asChild
+              variant={variant}
             >
-              <CodeXml />
-              GitHub
-            </Link>
-          </Button>
-        )}
-        {links.issue && (
-          <Button asChild>
-            <Link
-              href={links.issue}
-              target='_blank'
-            >
-              <AlertCircle />
-              Issue
-            </Link>
-          </Button>
-        )}
-        {links.pullRequest && (
-          <Button asChild>
-            <Link
-              href={links.pullRequest}
-              target='_blank'
-            >
-              <GitPullRequest />
-              Pull Request
-            </Link>
-          </Button>
-        )}
-        {links.live && (
-          <Button
-            asChild
-            variant='outline'
-          >
-            <Link
-              href={links.live}
-              target='_blank'
-            >
-              <ExternalLink />
-              Live Site
-            </Link>
-          </Button>
-        )}
-        {links.blog && (
-          <Button
-            asChild
-            variant='outline'
-          >
-            <Link
-              href={links.blog}
-              target='_blank'
-            >
-              <PencilLine />
-              Blog Post
-            </Link>
-          </Button>
+              <Link
+                href={links[key]}
+                target='_blank'
+              >
+                <Icon />
+                {label}
+              </Link>
+            </Button>
+          ) : null
         )}
       </div>
     </section>
