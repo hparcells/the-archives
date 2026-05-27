@@ -49,9 +49,23 @@ function Cool() {
         </ul>
       </section>
       <section className='stack-4'>
+        <h2>Mentors</h2>
+        <p>
+          People who have taught me what I know, have influenced my career, and everything in
+          between. Thank you.
+        </p>
+        <ul className='columns-2 sm:columns-3'>
+          <li>Tony</li>
+          <li>Casey</li>
+          <li>Mike</li>
+          <li>Roelle</li>
+          <li>Abe</li>
+        </ul>
+      </section>
+      <section className='stack-4'>
         <h2>Influences</h2>
         <p>People whose work has inspired me, motivated me, or have shaped the way I think.</p>
-        <ul>
+        <ul className='sm:columns-2'>
           <li>
             Pierce Brown, <em>Red Rising</em>
           </li>
