@@ -18,6 +18,7 @@ const sections: Section[] = [
     title: 'Content',
     items: [
       { title: 'Projects', to: '/projects' },
+      { title: 'Spreadsheets', to: '/spreadsheets' },
       { title: 'Blog', to: 'https://blog.hunterparcells.com/' }
     ]
   },
