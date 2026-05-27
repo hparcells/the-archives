@@ -34,8 +34,9 @@ const sections: Section[] = [
   {
     title: 'Other',
     items: [
-      { title: 'Support / Ko-fi', to: 'https://ko-fi.com/hunterparcells' },
-      { title: 'Cool People', to: '/cool' }
+      { title: 'Cool People', to: '/cool' },
+      { title: 'Internet Links', to: '/links' },
+      { title: 'Support / Ko-fi', to: 'https://ko-fi.com/hunterparcells' }
     ]
   }
 ];
