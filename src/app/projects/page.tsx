@@ -134,19 +134,17 @@ function Projects() {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
                 >
-                  <div className='pb-12'>
-                    <ProjectSection
-                      title={title}
-                      selectedGroup={selectedGroup}
-                      groupValue={groupValue}
-                      projects={visibleSectionProjects}
-                      initialLimit={5}
-                      hiddenCount={hiddenCount(filter)}
-                      showHidden={() => {
-                        setShowHidden(true);
-                      }}
-                    />
-                  </div>
+                  <ProjectSection
+                    title={title}
+                    selectedGroup={selectedGroup}
+                    groupValue={groupValue}
+                    projects={visibleSectionProjects}
+                    initialLimit={5}
+                    hiddenCount={hiddenCount(filter)}
+                    showHidden={() => {
+                      setShowHidden(true);
+                    }}
+                  />
                 </motion.section>
               );
             }

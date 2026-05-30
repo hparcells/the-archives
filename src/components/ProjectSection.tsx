@@ -45,7 +45,7 @@ function ProjectSection({
   const hasMore = visibleCount < sorted.length;
 
   return (
-    <div>
+    <div className='pb-12'>
       <SectionHeader
         leftText={title}
         rightText={hiddenCount ? `${hiddenCount} hidden` : ''}
